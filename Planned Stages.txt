@@ -1,7 +1,6 @@
 #### PHASE 1 ####
 
 # DONE #
-Franco - British Indian War
 AUS - HRE 
 CAN - Confederate to Quebec 
 LOU - Quebec - American war 
@@ -11,6 +10,7 @@ USA buy florida
 New Grenada claim GUY
 
 # IPR #
+Franco - British Indian War
 Balkans breaking off
 Russian claims on PLC
 Add decision for Mughal to get cores on: BUN, BIH, JOD, JAS, NAG, BOH, IND, BNG
@@ -18,4 +18,4 @@ Add modifiers for Mughal and Native American Confederation
 
 #### PHASE 2 ####
 Mexico - Central America Break off -- started
-France - Kingdom of Italy
+France - Kingdom of Italy puppet
