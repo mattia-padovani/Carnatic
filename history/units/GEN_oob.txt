@@ -1,0 +1,55 @@
+army = {
+	name = "Esercito di Genoa"
+	location = 724
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 724
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 724
+	}
+}
+
+navy = {
+	name = "Armata di Mare"
+	location = 724
+	ship = {
+		name= "Beraldo"
+		type = frigate
+	}
+
+	ship = {
+		name= "Haute Combe"
+		type = frigate
+	}
+
+	ship = {
+		name= "Carlo Felice"
+		type = frigate
+	}
+
+	ship = {
+		name= "Regina"
+		type = frigate
+	}
+
+	ship = {
+		name= "1a Squadrone Transporti"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2a Squadrone Transporti"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3a Squadrone Transporti"
+		type = clipper_transport
+	}
+
+}

@@ -1,0 +1,7 @@
+owner = GEN
+controller = GEN
+add_core = GEN
+naval_base = 1
+trade_goods = wool
+life_rating = 35
+colonial = 2

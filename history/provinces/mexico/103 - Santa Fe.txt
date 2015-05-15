@@ -1,0 +1,12 @@
+owner = APA
+controller = APA
+add_core = APA
+trade_goods = fruit
+life_rating = 35
+1861.1.1 = {
+	controller = USA
+	owner = USA
+	add_core = USA
+	add_core = CSA
+	remove_core = MEX
+}

@@ -1,0 +1,6 @@
+owner = OJI
+controller = OJI
+add_core = OJI
+trade_goods = fruit
+life_rating = 35
+1861.1.1 = { colonial = 0 }

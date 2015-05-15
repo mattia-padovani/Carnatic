@@ -1,0 +1,73 @@
+leader = {
+	name = "Guy Champlainne"
+	type = sea
+	date = 1816.1.1
+	background = cursed_luck
+	personality = skilled
+	prestige = 0.25
+}
+
+leader = {
+	name = "Jacques Cartier"
+	type = land
+	date = 1817.1.1
+	background = cursed_luck
+	personality = audacious
+	prestige = 0.25
+}
+
+army = {
+	name = "Garde Republicaine"
+	location = 232
+	regiment = {
+		name= "1.1ere Division d'Infanterie"
+		type = infantry
+		home = 58
+	}
+	regiment = {
+		name= "2.1ere Division d'Infanterie"
+		type = infantry
+		home = 64
+	}
+	regiment = {
+		name= "3.1ere Division d'Infanterie"
+		type = infantry
+		home = 65
+	}
+	regiment = {
+		name= "4.1ere Division d'Infanterie"
+		type = infantry
+		home = 66
+	}
+	regiment = {
+		name= "5.1ere Division d'Infanterie"
+		type = infantry
+		home = 68
+	}
+	regiment = {
+		name= "1ere Division d'Hussard"
+		type = hussar
+		home = 232
+	}
+	regiment = {
+		name= "1.1ere Division d'Artillerie"
+		type = artillery
+		home = 234
+	}
+	regiment = {
+		name= "2.1ere Division d'Artillerie"
+		type = artillery
+		home = 235
+	}
+	regiment = {
+		name= "3.1ere Division d'Artillerie"
+		type = artillery
+		home = 238
+	}
+	regiment = {
+		name= "4.1ere Division d'Artillerie"
+		type = artillery
+		home = 243
+	}
+}
+

@@ -1,0 +1,6 @@
+owner = QUE
+controller = QUE
+add_core = QUE
+add_core = MRU
+trade_goods = fish
+life_rating = 35

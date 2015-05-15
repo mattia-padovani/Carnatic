@@ -1,0 +1,9 @@
+owner = LOU
+controller = LOU
+add_core = SIO
+add_core = LOU
+trade_goods = cattle
+life_rating = 35
+colonial = 2
+1861.1.1 = { colonial = 0 }
+1861.1.1 = { railroad = 3 }

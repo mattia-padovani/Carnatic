@@ -1,0 +1,288 @@
+country_event = {
+	id = 44400
+	title = "Statehood 'Offered'"
+	desc = "The American Empire has demanded we join as another state in their so called Glorious Empire. They promise equal status if we join and imply war if we don't!"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Seek help from our cultural kin."
+		set_country_flag = lou_asked_for_help
+		QUE = { country_event = 44401 }
+		any_pop = {
+			militancy = -1
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = "Louisiana stand proud and strong."
+		set_country_flag = lou_refused_usa
+		prestige = 10
+		USA = { country_event = 44402 }
+		any_pop = {
+			militancy = -4
+		}
+		small_arms = 50
+		regular_clothes = 50
+		liquor = 50
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = "Equal status you say?"
+		prestige = -5
+		set_country_flag = lou_accepted_usa
+		USA = { country_event = 44403 }
+		any_pop = {
+			militancy = 3
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 44401
+	title = "Louisiana asks for help!"
+	desc = "The American Empire threatens our brethren to the south, we must aid them!"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will defend liberty and our kin!"
+		prestige = 5
+		create_alliance = LOU
+		relation = { who = LOU value = 200 }
+		USA = { country_event = 44404 }
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "We can only spare supplies."
+		small_arms = -50
+		regular_clothes = -50
+		liquor = -50
+		relation = { who = LOU value = 100 }
+		USA = { country_event = 44402 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 44402
+	title = "Louisiana refused!"
+	desc = "Louisiana has refused our glorious offer of statehood."
+	picture = "boer_war"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "It's not their choice."
+		set_global_flag = lou_american_war
+		LOU = { 
+			all_core = {
+				add_core = THIS
+			} 
+		}
+		war = {
+			target = LOU
+			attacker_goal = {
+				casus_belli = conquest
+				country = USA
+			}
+		}
+		any_pop = {
+			limit = { has_pop_culture = louisianian }
+			militancy = 6
+		}
+		badboy = 0.8
+		
+		ai_chance = {
+			factor = 100
+		}
+	}	
+}
+
+country_event = {
+	id = 44403
+	title = "Louisiana accepts!"
+	desc = "Louisiana has seen the merits of our offer."
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The empire's glory grows"
+		prestige = 20
+		set_global_flag = lou_american_war
+		LOU = { 
+			all_core = {
+				add_core = THIS
+			} 
+		}
+		inherit = LOU
+		add_accepted_culture = louisianian
+
+		ai_chance = {
+			factor = 100
+		}
+	}	
+}
+
+country_event = {
+	id = 44404
+	title = "Quebec guarantees Louisiana!"
+	desc = "Quebec has proclaimed their guarantee on Louisiana's independence."
+	picture = "boer_war"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "It's not their decision to make."
+		set_global_flag = lou_american_war
+		LOU = { 
+			all_core = {
+				add_core = THIS
+			} 
+		}
+		war = {
+			target = LOU
+			attacker_goal = {
+				casus_belli = conquest
+				country = USA
+			}
+		}
+		any_pop = {
+			limit = { has_pop_culture = louisianian }
+			militancy = 6
+		}
+		badboy = 0.8
+		
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "Maybe we might want to rethink this"
+		prestige = -10
+		LOU = { country_event = 44405 }
+		any_pop = {
+			consciousness = 3
+		}
+		
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 44405
+	title = "The Americans Retreat!"
+	desc = "With Quebec's help we have scared off the Americans."
+	picture = "treaty"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "The alliance stands tall!"
+		prestige = 10
+		set_global_flag = lou_american_war_ended
+		LOU = { 
+			all_core = {
+				remove_core = USA
+			} 
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}	
+}
+
+country_event = {
+	id = 44406
+	title = "We are victorious!"
+	desc = "The Americans have been beaten!"
+	picture = "treaty"
+	
+	trigger = {
+		tag = LOU
+		has_global_flag = lou_american_war
+		truce_with = USA
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "The alliance stands tall!"
+		prestige = 10
+		set_global_flag = lou_american_war_ended
+		LOU = { 
+			all_core = {
+				remove_core = USA
+			} 
+		}		
+	}
+}
+
+country_event = {
+	id = 44407
+	title = "We have lost!"
+	desc = "We have been beaten. Emperor Washington has failed us too many times. It's time for him to be gone. A mob has gathered demanding Emperor George Washington."
+	picture = "execution_of_emperor_maximillian"
+	
+	trigger = {
+		tag = USA
+		has_global_flag = lou_american_war
+		truce_with = LOU
+		OR = {	
+			government = absolute_monarchy
+			government = prussian_constitutionalism 
+			government = hms_government
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "The old emperor now hangs on a tree outside the white house"
+		government = democracy
+		political_reform = universal_weighted_voting
+		political_reform = non_secret_ballots
+		ruling_party_ideology = liberal
+		
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+		any_pop = { militancy = -6 }
+		LOU = { 
+			all_core = {
+				limit = {
+					owned_by = USA
+				}
+				add_core = USA
+			} 
+		}
+		220 = { change_province_name = "Columbia" }
+	}
+}

@@ -1,0 +1,140 @@
+political_decisions = {
+
+	integrate_neuchatel = {
+		picture = declare_republic_of_neuchatel
+		potential = {
+			tag = SWI
+			NCT = { exists = yes vassal_of = SWI }
+			OR = {
+				has_country_flag = neuchatel_crisis_escalated
+				year = 1860
+			}
+		}
+		
+		allow = {
+			war = no
+			NCT = { war = no }
+			PRU = { NOT = { casus_belli = NCT } }
+			NGF = { NOT = { casus_belli = NCT } }
+			GER = { NOT = { casus_belli = NCT } }
+		}
+		
+		effect = {
+			clr_country_flag = neuchatel_crisis_escalated
+			any_country = { clr_country_flag = neuchatel_crisis_escalated }
+			any_country = { limit = { has_country_flag = supports_switzerland } leave_alliance = SWI clr_country_flag = supports_switzerland }
+			release = NCT
+			inherit = NCT
+			608 = {
+				remove_core = NGF
+				remove_core = GER
+				remove_core = PRU
+				remove_core = NCT
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	integrate_neuchatel_prussia = {
+		picture = declare_republic_of_neuchatel
+		potential = {
+			OR = {
+				tag = PRU
+				tag = GER
+				tag = NGF
+			}
+			has_country_flag = neuchatel_crisis_escalated
+		}
+		
+		allow = {
+			war = no
+			NCT = { war = no }
+			NCT = { exists = yes NOT = { vassal_of = SWI } in_sphere = THIS }
+		}
+		
+		effect = {
+			clr_country_flag = neuchatel_crisis_escalated
+			any_country = { clr_country_flag = neuchatel_crisis_escalated }
+			any_country = { limit = { has_country_flag = supports_switzerland } leave_alliance = SWI clr_country_flag = supports_switzerland }
+			inherit = NCT
+			608 = { remove_core = NCT }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	call_geneva_convention = {
+		potential = {
+			tag = SWI
+			owns = 607
+			NOT = {
+				has_global_flag = geneva_convention_held
+			}
+		}
+		
+		allow = {
+			any_greater_power = {
+				war_exhaustion = 5
+			}
+			empiricism = 1
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = signed_the_geneva_convention
+				duration = -1
+			}
+			set_global_flag = geneva_convention_held
+			prestige = 10
+		}
+	}
+	
+	sign_the_geneva_convention = {
+		alert = no
+		potential = {
+			civilized = yes
+			has_global_flag = geneva_convention_held
+			NOT = { has_country_modifier = signed_the_geneva_convention }
+		}
+		
+		allow = {
+			NOT = {
+				badboy = 1
+				has_country_modifier = withdrew_from_geneva_convention
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = signed_the_geneva_convention
+				duration = -1
+			}
+			badboy = -1
+		}
+	}
+	
+	build_gotthard_tunnel = {
+	picture = build_gotthard_tunnel
+		potential = {
+			tag = SWI
+			owns = 606
+			NOT = {
+				has_country_flag = gotthard_tunnel_built
+			}
+		}
+		
+		allow = {
+			invention = machine_tools
+			steel_railroad = 1
+			money = 10000
+		}
+		
+		effect = {
+			money = -10000
+			606 = {
+				infrastructure = 4
+			}
+			prestige = 5
+			set_country_flag = gotthard_tunnel_built
+		}
+	}
+}

@@ -1,0 +1,55 @@
+political_decisions = {
+	lou_is_ours = {
+		picture = treaty_signing
+		potential = {
+			tag = USA
+			is_greater_power = yes
+			exists = LOU
+			NOT = { 
+				has_country_flag = lou_is_ours_flag
+				truce_with = LOU 
+			}
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			NOT = { truce_with = LOU }
+		}
+		effect = {
+			relation = { who = LOU value = -200 }
+			relation = { who = QUE value = -200 }
+			diplomatic_influence = { who = LOU value = -200 }
+			leave_alliance = LOU
+			leave_alliance = QUE
+			set_country_flag = lou_is_ours_flag
+			LOU = {
+				country_event = 44400
+				war_exhaustion = -20
+			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					NOT = { 
+						OR = { 
+							tag = THIS
+							tag = QUE
+						}
+					}
+				}
+				diplomatic_influence = { who = LOU value = -100 }
+			}
+			any_pop = {
+				dominant_issue = {
+					factor = 0.05
+					value = jingoism
+				}
+				consciousness = 2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+}

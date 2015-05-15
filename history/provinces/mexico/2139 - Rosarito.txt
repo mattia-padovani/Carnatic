@@ -1,0 +1,6 @@
+owner = PIM
+controller = PIM
+add_core = PIM
+add_core = MEX
+trade_goods = fruit
+life_rating = 40

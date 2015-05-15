@@ -1,0 +1,6 @@
+owner = QUE
+controller = QUE
+add_core = QUE
+add_core = MRU
+trade_goods = timber
+life_rating = 35

@@ -1,0 +1,25 @@
+political_decisions = {
+	make_vilnius_capital = {
+		picture = old_vilnius
+		potential = {
+			tag = LIT
+			owns = 360
+			360 = { is_capital = no }
+		}
+
+		allow = {
+			owns = 360
+			war = no
+		}
+
+		effect = {
+			capital = 360
+			any_pop = {
+				militancy = -1
+				consciousness = -2
+				}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+}

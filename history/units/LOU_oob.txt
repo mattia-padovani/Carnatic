@@ -1,0 +1,25 @@
+
+leader = {
+	name = "Pierre D'Auberre"
+	type = land
+	date = 1819.1.1
+	background = uncommonly_young
+	personality = audacious
+	prestige = 0.25
+}
+
+army = {
+	name = "Garde Republicaine"
+	location = 139
+	regiment = {
+		name= "1.1ere Division d'Infanterie"
+		type = infantry
+		home = 139
+	}
+	regiment = {
+		name= "2.1ere Division d'Infanterie"
+		type = infantry
+		home = 146
+	}
+}
+

@@ -1,0 +1,6 @@
+owner = BLA
+controller = BLA
+add_core = BLA
+add_core = MTC
+trade_goods = iron
+life_rating = 35

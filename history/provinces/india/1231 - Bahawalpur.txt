@@ -1,0 +1,13 @@
+owner = BHP
+controller = BHP
+add_core = BHP
+add_core = PNJ
+add_core = HND
+add_core = MUG
+trade_goods = tea
+life_rating = 32
+1861.1.1 = {
+	owner = ENG
+	controller = ENG
+	colonial = 2
+}
