@@ -11,6 +11,7 @@ political_decisions = {
 			}
 		}
 		allow = {
+			year = 1837
 			war = no
 			is_vassal = no
 			NOT = { truce_with = LOU }
@@ -51,5 +52,71 @@ political_decisions = {
 		}
 	}
 	
+	join_quebec = {
+		picture = treaty_signing
+		potential = {
+			OR = {
+				tag = CAN
+				primary_culture = anglo_canadian
+				AND = {
+					primary_culture = british
+					accepted_culture = anglo_canadian
+					NOT = { tag = ENG }
+					NOT = { tag = ENL }
+				}
+				AND = {
+					has_global_flag = lou_american_war_ended
+					tag = LOU
+				}
+			}
+			QUE = {
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+			}
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			exists = QUE
+			any_owned_province = {
+				any_neighbor_province = { owned_by = QUE }
+			}
+			NOT = {
+				has_country_flag = confederation_we_have_applied_quebec
+			}
+		}
+		allow = {
+			war = no
+			QUE = { war = no }
+			OR = {
+				is_vassal = no
+				overlord = { is_our_vassal = QUE }
+				overlord = {
+					ai = yes
+					is_sphere_leader_of = QUE
+				}
+			}
+			OR = {
+				in_sphere = QUE
+				AND = {
+					part_of_sphere = no
+					relation = { who = QUE value = 150 }
+				}
+				sphere_owner = { is_sphere_leader_of = QUE }
+			}
+		}
+		effect = {
+			set_country_flag = confederation_we_have_applied_quebec
+			QUE = {
+				country_event = 44325
+				war_exhaustion = -20
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 }

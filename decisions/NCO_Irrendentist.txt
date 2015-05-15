@@ -1,0 +1,85 @@
+political_decisions = {
+	claim_guyana = {
+		potential = {
+			tag = GCO
+			NOT = { has_country_flag = claim_guyana }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			GCO = {
+				all_core = { owned_by = GCO }
+			}		
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+
+		effect = {
+			any_pop = {
+				dominant_issue = {
+					factor = 0.15
+					value = jingoism
+				}
+				consciousness = 1
+			}
+			badboy = 6
+			prestige = 10
+			set_country_flag = claim_guyana
+			ENG_1979 = { add_core = GCO }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.50
+			}		
+		}
+	}
+	
+	claim_amazon = {
+		potential = {
+			tag = GCO
+			has_country_flag = claim_guyana 
+			NOT = { has_country_flag = claim_amazon }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			GCO = {
+				all_core = { owned_by = GCO }
+			}		
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+
+		effect = {
+			any_pop = {
+				dominant_issue = {
+					factor = 0.15
+					value = jingoism
+				}
+				consciousness = 1
+			}
+			badboy = 9
+			prestige = 20
+			set_country_flag = claim_amazon
+			BRZ_2407 = { add_core = GCO }
+			2412 = { add_core = GCO }
+			2408 = { add_core = GCO }
+			2415 = { add_core = GCO }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.50
+			}		
+		}
+	}
+}

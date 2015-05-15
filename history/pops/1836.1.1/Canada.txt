@@ -446,7 +446,7 @@
 	clergymen = {
 		culture = native_american_minor
 		religion = animist
-		size = 75
+		size = 675
 	}
 
 	artisans = {
@@ -458,13 +458,13 @@
 	soldiers = {
 		culture = native_american_minor
 		religion = animist
-		size = 25
+		size = 1025
 	}
 
 	farmers = {
 		culture = native_american_minor
 		religion = animist
-		size = 2700
+		size = 12700
 	}
 
 }
@@ -491,7 +491,7 @@
 	clergymen = {
 		culture = native_american_minor
 		religion = animist
-		size = 50
+		size = 550
 	}
 
 	artisans = {
@@ -503,13 +503,13 @@
 	soldiers = {
 		culture = native_american_minor
 		religion = animist
-		size = 25
+		size = 1025
 	}
 
 	farmers = {
 		culture = native_american_minor
 		religion = animist
-		size = 1750
+		size = 9750
 	}
 }
 #Prince Rupert (8000/2000 POPS)

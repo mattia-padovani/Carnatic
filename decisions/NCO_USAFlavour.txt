@@ -1,0 +1,25 @@
+political_decisions = {
+	purchase_florida = {
+		picture = treaty_signing
+		potential = {
+			tag = USA
+		}
+		
+		allow = {
+			war = no
+			money = 100000
+		}
+		
+		effect = {
+			USA_200 = { add_core = USA }
+			
+			any_country = {
+				limit = {
+					owns = 199
+				}
+				country_event = 44409
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

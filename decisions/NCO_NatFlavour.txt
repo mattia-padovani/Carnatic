@@ -1,0 +1,104 @@
+political_decisions = {
+	form_nat_confederation = {
+		picture = treaty_signing
+		potential = {
+			tag = SAL
+			has_global_flag = marching_on_the_trail_of_tears
+			NOT = { has_country_flag = nat_confederation }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = nat_confederation
+			prestige = 8
+			all_core = {
+				remove_core = THIS
+				add_core = NAT
+			}
+			change_tag = NAT
+			add_accepted_culture = metis
+			add_accepted_culture = dakota
+			add_accepted_culture = cherokee
+			add_accepted_culture = pueblo
+			add_accepted_culture = cree
+			add_accepted_culture = navajo
+			add_accepted_culture = inuit
+			add_accepted_culture = native_american_minor
+			
+			years_of_research = 4.5
+			any_country = {
+				limit = {
+					OR = {
+						primary_culture = metis
+						primary_culture = dakota
+						primary_culture = cherokee
+						primary_culture = pueblo
+						primary_culture = cree
+						primary_culture = navajo
+						primary_culture = inuit
+						primary_culture = native_american_minor
+					}
+				}
+				country_event = 44408
+			}
+		}
+	}
+	
+	join_nat_confederation = {
+		picture = treaty_signing
+		potential = {
+			OR = {
+				primary_culture = metis
+				primary_culture = dakota
+				primary_culture = cherokee
+				primary_culture = pueblo
+				primary_culture = cree
+				primary_culture = navajo
+				primary_culture = inuit
+				primary_culture = native_american_minor
+			}
+			exists = NAT
+			any_owned_province = {
+				any_neighbor_province = { owned_by = NAT }
+			}
+			NOT = {
+				has_country_flag = confederation_we_have_applied
+				tag = NAT
+			}
+		}
+		allow = {
+			year = 1845
+			war = no
+			NAT = { war = no }
+			OR = {
+				is_vassal = no
+				overlord = { is_our_vassal = NAT }
+				overlord = {
+					ai = yes
+					is_sphere_leader_of = NAT
+				}
+			}
+			OR = {
+				in_sphere = NAT
+				AND = {
+					part_of_sphere = no
+					relation = { who = NAT value = 100 }
+				}
+				sphere_owner = { is_sphere_leader_of = NAT }
+			}
+		}
+		effect = {
+			set_country_flag = confederation_we_have_applied
+			NAT = {
+				country_event = 44325
+				war_exhaustion = -20
+				years_of_research = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

@@ -737,6 +737,7 @@ political_decisions = {
 			NOT = {
 				has_country_flag = post_colonial_country
 				exists = ITA
+				tag = VEN
 			}
 		}
 		
@@ -786,7 +787,10 @@ political_decisions = {
 				limit = {
 					is_culture_group = italian
 					in_sphere = THIS
-					NOT = { has_country_flag = post_colonial_country }
+					NOT = { 
+						has_country_flag = post_colonial_country
+						tag = VEN
+					}
 				}
 				country_event = 11101
 			}
