@@ -232,7 +232,7 @@ country_event = {
 	option = {
 		name = "The alliance stands tall!"
 		prestige = 10
-		set_global_flag = lou_american_war_ended
+		set_global_flag = lou_american_war_lost
 		LOU = { 
 			all_core = {
 				remove_core = USA
@@ -249,7 +249,7 @@ country_event = {
 	
 	trigger = {
 		tag = USA
-		has_global_flag = lou_american_war
+		has_global_flag = lou_american_war_lost
 		truce_with = LOU
 		OR = {	
 			government = absolute_monarchy
@@ -283,6 +283,81 @@ country_event = {
 				add_core = USA
 			} 
 		}
+		treasury = 120000
 		220 = { change_province_name = "Columbia" }
+	}
+}
+
+country_event = {
+	id = 44408 
+	title = "Join Confederation"
+	desc = "We have invited to join the confederation of the tribes."
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We must"
+		THIS = {
+			all_core = { add_core = NAT }
+		}
+		NAT = { 				
+			war_exhaustion = -20
+			years_of_research = 0.1
+			inherit = THIS
+			any_pop = {
+				militancy = -6
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "No, thanks"
+	}
+}
+
+country_event = {
+	id = 44409
+	title = "Purchase Florida"
+	desc = "The USA has declared their intent on purchasing Florida from us."
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We accept"
+		treasury = 100000
+		USA = { treasury = -100000 }
+		
+		any_owned = {
+			limit = {
+				region = USA_200
+			}
+			secede_province = USA
+		}
+		
+		ai_will_do = { factor = 70 }
+	}
+	
+	option = {
+		name = "We refuse"
+		USA = { country_event = 44410 }
+		
+		ai_will_do = { factor = 30 }
+	}
+}
+	
+country_event = {
+	id = 44410
+	title = "Purchase Florida"
+	desc = "Our generous offer for purchasing Florida has been denied."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "There are always other means."
 	}
 }
