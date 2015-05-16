@@ -202,7 +202,7 @@ great_power = {
 	research_points = 1.5
 	diplomatic_points_modifier = 1.0
 	leadership = 2.0
-	badboy = 0.05
+	badboy = -0.05
 }
 
 second_power = {
