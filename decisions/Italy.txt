@@ -515,6 +515,15 @@ political_decisions = {
 				invention = national_fraternity
 				is_greater_power = yes
 			}
+			NOT = { 
+				VEN = { 
+					OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}
+				}
+			}
+			
 		}
 
 		effect = {

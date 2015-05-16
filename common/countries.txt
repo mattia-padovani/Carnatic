@@ -1,5 +1,8 @@
 #Please keep tags sorted alphabetically when you add/remove country tags
 
+# Special countries...
+REB 	= 	"countries/rebels.txt"
+
 ## NCO ##
 GEN	= "countries/Genoa.txt"
 HRE = "countries/Holy Roman Empire.txt"
@@ -27,9 +30,6 @@ PIM = "countries/Pima.txt"
 PUE = "countries/Pueblo.txt"
 SAL = "countries/Salish.txt"
 SIO = "countries/Sioux.txt"
-
-# Special countries...
-REB 	= 	"countries/rebels.txt"
 
 ### NEW NATIONS MOD ###
 
