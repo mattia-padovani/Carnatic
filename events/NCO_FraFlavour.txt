@@ -1,0 +1,246 @@
+country_event = {
+	id = 44600
+	title = "Merchant Ships Harassed!"
+	desc = "EVTDESC44600"
+	picture = crimean_war_ships
+	
+	trigger = {
+		tag = FRA
+		ENG = { 
+			war = no
+		}
+		NOT = { has_global_flag = franco_british_war_over_india }
+		year = 1842
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Search for allies"
+		set_global_flag = franco_british_war_over_india
+
+		any_country = { 
+			limit = {
+				AND = {
+					OR = { 
+						tag = SPA
+						tag = AUS
+						tag = RUS
+					}
+					NOT = { war_with = FRA }
+				}
+			}
+			country_event = 44601
+		}
+		
+		PRU = {
+			country_event = 44602
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "We will do it alone"
+		set_global_flag = franco_british_war_over_india
+
+		leave_alliance = ENG
+		war = {
+			target = ENG
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1261
+			}
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1249
+			}
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1251
+			}		
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1257
+			}
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1258
+			}
+			defender_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1306
+			}		
+			defender_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1287
+			}
+			defender_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1304
+			}
+			call_ally = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 44601
+	title = "Treaty of Versailles!"
+	desc = "EVTDESC44601"
+	picture = crimean_war_ships
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We will help"
+		leave_alliance = ENG
+		create_alliance = FRA
+
+		relation = { who = ENG value = -200 }
+		relation = { who = FRA value = 200 }
+		prestige = 5
+
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = "We don't want to get involved"
+		relation = { who = FRA value = -100 }
+		prestige = -5
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = 44602
+	title = "Alliance from the British"
+	desc = "EVT44602"
+	picture = crimean_war_ships
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We will help"
+		leave_alliance = FRA
+		create_alliance = PRU
+
+		relation = { who = FRA value = -200 }
+		relation = { who = ENG value = 200 }
+		prestige = 5
+
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "We don't want to get involved"
+		relation = { who = ENG value = -100 }
+		prestige = -5
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = 44603
+	title = "Time for Retaliation"
+	desc = "We have waited all we can for signatures on the treaty, now is the time to strike at the British!"
+	picture = crimean_war_ships
+	
+	trigger = {
+		tag = FRA
+		has_global_flag = franco_british_war_over_india
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "It is time for war!"
+
+		leave_alliance = ENG
+		war = {
+			target = ENG
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1261
+			}
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1249
+			}
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1251
+			}		
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1257
+			}
+			attacker_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1258
+			}
+			defender_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1306
+			}		
+			defender_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1287
+			}
+			defender_goal = {
+				casus_belli = place_in_the_sun
+				state_province_id = 1304
+			}
+			call_ally = yes
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 44604
+	title = "We Have Won!"
+	desc = "We have beat back the enemy and can now claim India for ourselves!"
+	
+	trigger = {
+		OR = { 
+			tag = FRA
+			tag = ENG
+		}
+		has_global_flag = franco_british_war_over_india
+		owns = 1304
+		OR = {
+			truce_with = FRA
+			truce_with = ENG
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Wahoo!"
+		set_country_flag = won_franco_british_war
+		prestige = 30
+	}
+}

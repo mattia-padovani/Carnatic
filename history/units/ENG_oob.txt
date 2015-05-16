@@ -575,8 +575,8 @@ army = {
 
 
 army = {
-	name = "The Montreal Garrison"
-	location = 58
+	name = "The Georgetown Garrison"
+	location = 2239
 	
 	regiment = {
 		name= "1st Cavalry Division"
@@ -694,8 +694,8 @@ army = {
 }
 
 army = {
-	name = "The Bombay Army"
-	location = 1297
+	name = "The Darjeeling Army"
+	location = 1252
 	regiment = {
 		name= "1.9th Division"
 		type = infantry
@@ -812,8 +812,8 @@ army = {
 }
 
 army = {
-	name = "The Delhi Army"
-	location = 1239
+	name = "The Cuttack Army"
+	location = 1251
 	regiment = {
 		name= "1.2nd Cavalry Division"
 		type = cuirassier

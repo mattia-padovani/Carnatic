@@ -97,6 +97,8 @@ conquest
 conquest_any
 annex_africa
 annex_africa_full
+annex_india
+annex_india_full
 establish_protectorate_BC_casus_belli
 establish_protectorate_NI_casus_belli
 establish_protectorate_casus_belli
@@ -5660,5 +5662,194 @@ conquest_any = {
 	war_name = WAR_CONQUEST_NAME
 	
 	on_add = {
+	}
+}
+
+
+# India War
+annex_india = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 0
+	crisis = no
+	
+	construction_speed = 1.5
+	
+	badboy_factor = 0
+	prestige_factor = 0.5
+	peace_cost_factor = 0.6
+	penalty_factor = 2
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 12
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	always = yes
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		number_of_states = 2
+		THIS = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			has_country_flag = won_franco_british_war
+		}
+		civilized = no
+		is_vassal = no
+		OR = {
+			primary_culture = assamese
+			primary_culture = baluchi
+			primary_culture = bengali
+			primary_culture = bihari
+			primary_culture = manipuri
+			primary_culture = nepali
+			primary_culture = oriya
+			primary_culture = sinhala
+			primary_culture = avadhi
+			primary_culture = kanauji
+			primary_culture = kashmiri
+			primary_culture = panjabi
+			primary_culture = gujarati
+			primary_culture = marathi
+			primary_culture = sindi
+			primary_culture = rajput
+			primary_culture = kannada
+			primary_culture = malayalam
+			primary_culture = tamil
+			primary_culture = telegu
+			tag = CRL
+		}
+		ai = yes
+		OR = {
+			war_with = THIS
+			THIS = {
+				NOT = { has_country_modifier = punitive_effects }
+			}
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = { is_colonial = no }
+		#NOT = { any_owned_province = { is_capital = yes } }
+		OR = {
+			THIS = { ai = no }
+			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+			AND = {
+				any_owned_province = { port = yes }
+				THIS = {
+					any_owned_province = { port = yes }
+				}
+			}
+		}
+	}
+	
+	po_demand_state = yes
+	
+	war_name = WAR_CONCESSION_NAME
+
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.1
+		}
+	}
+}
+
+annex_india_full = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 0
+	crisis = no
+	
+	construction_speed = 1.5
+	
+	badboy_factor = 0
+	prestige_factor = 0.5
+	peace_cost_factor = 0.6
+	penalty_factor = 2
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 12
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	always = yes
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		NOT = { number_of_states = 2 }
+		THIS = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			has_country_flag = won_franco_british_war
+		}
+		civilized = no
+		is_vassal = no
+		OR = {
+			primary_culture = assamese
+			primary_culture = baluchi
+			primary_culture = bengali
+			primary_culture = bihari
+			primary_culture = manipuri
+			primary_culture = nepali
+			primary_culture = oriya
+			primary_culture = sinhala
+			primary_culture = avadhi
+			primary_culture = kanauji
+			primary_culture = kashmiri
+			primary_culture = panjabi
+			primary_culture = gujarati
+			primary_culture = marathi
+			primary_culture = sindi
+			primary_culture = rajput
+			primary_culture = kannada
+			primary_culture = malayalam
+			primary_culture = tamil
+			primary_culture = telegu
+			tag = CRL
+		}
+		ai = yes
+		OR = {
+			war_with = THIS
+			THIS = {
+				NOT = { has_country_modifier = punitive_effects }
+			}
+		}
+		OR = {
+			THIS = { ai = no }
+			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+			AND = {
+				any_owned_province = { port = yes }
+				THIS = {
+					any_owned_province = { port = yes }
+				}
+			}
+		}
+	}
+	
+	po_annex = yes
+	
+	war_name = WAR_PROTECTORATE_NAME
+
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.1
+		}
 	}
 }

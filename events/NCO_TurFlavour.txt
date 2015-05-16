@@ -1,0 +1,100 @@
+country_event = {
+	id = 44500
+	title = "The Balkans demand freedom!"
+	desc = "Apparently our puppets have been scheming behind our back and have declared themselves independent."
+	picture = "caucasian_war"
+	
+	trigger = {
+		tag = TUR
+		NOT = { has_global_flag = balkans_declare_freedom }
+		year = 1840
+	}
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	option = {
+		name = "We will not allow this!"
+		set_global_flag = balkans_declare_freedom
+		
+		any_country = {
+			limit = {
+				vassal_of = TUR
+				capital_scope = { continent = europe }
+			}
+			country_event = 44502
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "Let them go"
+		set_global_flag = balkans_declare_freedom
+		any_country = {
+			limit = {
+				AND = {
+					vassal_of = TUR
+					capital_scope = { continent = europe }
+				}
+			}
+			country_event = 44501
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 44501
+	title = "Freedom!"
+	desc = "The Ottoman's quake in their boots and free us"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Hurray!"
+		TUR = { release_vassal = THIS }
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 44502
+	title = "Rejection!"
+	desc = "The Ottoman's refuse to let us go!"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will force them!"
+		TUR = {
+			relation = { who = THIS value = -200 }
+			diplomatic_influence = { who = THIS value = -200 }
+			release_vassal = THIS
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = conquest
+					country = TUR
+				}
+				defender_goal = {
+					casus_belli = status_quo
+					country = THIS
+				}
+				call_ally = no
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+

@@ -614,6 +614,27 @@ political_decisions = {
 					}
 				}
 			}
+			TYR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+							war = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+			OR = {	
+				government = absolute_monarchy
+				government = prussian_constitutionalism 
+				government = hms_government
+			}
 		}
 		
 		effect = {
@@ -624,7 +645,7 @@ political_decisions = {
 			}
 			GER = {
 				all_core = {
-					remove_core = THIS
+					remove_core = GER
 					add_core = HRE
 				}
 			}

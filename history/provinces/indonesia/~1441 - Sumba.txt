@@ -4,7 +4,6 @@ add_core = BIM
 trade_goods = timber
 life_rating = 30
 naval_base = 1
-colonial = 2
 1860.1.1 = {
 	owner = NET
 	controller = NET
