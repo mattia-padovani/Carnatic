@@ -3,6 +3,44 @@
 #
 # Effects are fully scriptable here.
 
+mughal_reforms = {
+	trigger = {
+		exists = yes
+		primary_culture = panjabi
+		1236 = {
+			owned_by = THIS
+		}
+	}
+	org_regain = 0.2
+	land_organisation = 0.2
+	mobilisation_size = 0.16
+	war_exhaustion = -0.2
+	tax_efficiency = 0.05
+	mobilisation_economy_impact = -0.25
+	global_pop_consciousness_modifier = 0.1
+	global_pop_militancy_modifier = -0.05
+	icon = 5
+}
+
+native_american_reforms = {
+	trigger = {
+		exists = yes
+		OR = {
+			is_culture_group = native_american
+		}
+	}
+	org_regain = 0.2
+	land_organisation = 0.2
+	mobilisation_size = 0.16
+	war_exhaustion = -0.2
+	tax_efficiency = 0.05
+	mobilisation_economy_impact = -0.25
+	global_pop_consciousness_modifier = 0.1
+	global_pop_militancy_modifier = -0.05
+	global_immigrant_attract = -0.5	#-50%
+	icon = 5
+}
+
 the_british_raj  = {
 	trigger = {
 		OR = {

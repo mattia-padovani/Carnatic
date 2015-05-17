@@ -110,13 +110,13 @@
 851 = {
 	aristocrats = {
 		culture = albanian
-		religion = sunni
-		size = 600
+		religion = catholic
+		size = 500
 	}
 
 	clergymen = {
 		culture = albanian
-		religion = sunni
+		religion = catholic
 		size = 225
 	}
 
@@ -138,14 +138,20 @@
 		size = 21075
 	}
 
-	clergymen = {
-		culture = albanian
+	aristocrats = {
+		culture = venetian
 		religion = catholic
-		size = 50
+		size = 100
+	}
+
+	clergymen = {
+		culture = venetian
+		religion = catholic
+		size = 150
 	}
 
 	farmers = {
-		culture = albanian
+		culture = venetian
 		religion = catholic
 		size = 5750
 	}

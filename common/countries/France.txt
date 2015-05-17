@@ -1,5 +1,10 @@
-color = { 20 50 210 }
+color = { 49 140 231 }
 graphical_culture = FrenchGC
+absolute_monarchy = { 0 53 194 }
+bourgeois_dictatorship = { 90 160 190  }
+fascist_dictatorship = { 0  0  70 }
+presidential_dictatorship = { 90 160 190 }
+proletarian_dictatorship = { 90 10 60 }
 
 party = {
 	name = "FRA_reactionary" #Légitimiste

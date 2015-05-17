@@ -295,37 +295,49 @@
 #Milan (1332000/333000 POPS)
 726 = {
 	aristocrats = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 7350
 	}
 
 	bureaucrats = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 1325
 	}
 
 	officers = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 600
 	}
 
 	clergymen = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 3350
 	}
 
+	craftsmen = {
+		culture = venetian
+		religion = catholic
+		size = 650
+	}
+	
+	clerks = {
+		culture = venetian
+		religion = catholic
+		size = 350
+	}
+	
 	artisans = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 10000
 	}
 
 	artisans = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 10000
 	}
@@ -343,17 +355,23 @@
 	}
 
 	soldiers = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
 		size = 3350
 	}
 
 	farmers = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
-		size = 275925
+		size = 75925
 	}
 
+	farmers = {
+		culture = north_italian
+		religion = catholic
+		size = 205925
+	}
+	
 	clergymen = {
 		culture = north_italian
 		religion = jewish
@@ -464,10 +482,22 @@
 		size = 400
 	}
 
+	capitalists = {
+		culture = venetian
+		religion = catholic
+		size = 400
+	}
+	
 	clergymen = {
 		culture = venetian
 		religion = catholic
 		size = 1425
+	}
+	
+	clerks = {
+		culture = venetian
+		religion = catholic
+		size = 525
 	}
 	
 	craftsmen = {

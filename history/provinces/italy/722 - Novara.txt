@@ -1,5 +1,5 @@
-owner = LOM
-controller = LOM
+owner = NIT
+controller = NIT
 add_core = LOM
 add_core = SAR
 add_core = ITA

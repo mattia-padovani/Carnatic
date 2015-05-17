@@ -7,7 +7,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		ENG = { 
-			war = no
+			NOT = { war_with = FRA }
 		}
 		NOT = { has_global_flag = franco_british_war_over_india }
 		year = 1842
@@ -242,5 +242,8 @@ country_event = {
 		name = "Wahoo!"
 		set_country_flag = won_franco_british_war
 		prestige = 30
+		
 	}
 }
+
+

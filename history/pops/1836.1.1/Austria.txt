@@ -25,6 +25,12 @@
 		religion = catholic
 		size = 550
 	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 250
+	}
 
 	artisans = {
 		culture = south_german
@@ -39,7 +45,7 @@
 	}
 
 	soldiers = {
-		culture = south_german
+		culture = venetian
 		religion = catholic
 		size = 100
 	}

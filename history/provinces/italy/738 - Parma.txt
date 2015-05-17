@@ -1,5 +1,5 @@
-owner = PAR
-controller = PAR
+owner = NIT
+controller = NIT
 add_core = PAR
 add_core = ITA
 trade_goods = iron

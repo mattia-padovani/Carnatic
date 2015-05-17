@@ -42,3 +42,9 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
+
+foreign_weapons = yes_foreign_weapons
+foreign_training = yes_foreign_training
+
+# Technologies
+flintlock_rifles = 1

@@ -691,9 +691,9 @@
 	}
 
 	farmers = {
-		culture = north_italian
+		culture = venetian
 		religion = catholic
-		size = 650
+		size = 850
 	}
 	
 	clergymen = {
