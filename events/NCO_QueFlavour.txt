@@ -96,11 +96,16 @@ country_event = {
 				add_core = THIS
 			} 
 		}
+		leave_alliance = LOU
+		casus_belli = {
+			target = LOU
+			type = conquest
+			months = 12
+		}
 		war = {
 			target = LOU
 			attacker_goal = {
 				casus_belli = conquest
-				country = USA
 			}
 			defender_goal = {
 				casus_belli = status_quo
@@ -159,6 +164,11 @@ country_event = {
 			all_core = {
 				add_core = THIS
 			} 
+		}
+		casus_belli = {
+			target = LOU
+			type = conquest
+			months = 12
 		}
 		war = {
 			target = LOU

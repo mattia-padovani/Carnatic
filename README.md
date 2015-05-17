@@ -2,7 +2,7 @@
 
 Mod built on HPM to add an alt history/freshen things up
 
-## Currently Planned Stages ## 
+## Currently Planned Stages ##
 Feel free to suggest ideas
 
 ### PHASE 1 ###
@@ -18,9 +18,9 @@ New Grenada claim GUY
 Balkans breaking off
 Franco - British Indian War
 Add modifiers for Mughal and Native American Confederation
+Russian claims on PLC
 
 ##### IPR #####
-Russian claims on PLC
 Add decision for Mughal to get cores on: BUN, BIH, JOD, JAS, NAG, BOH, IND, BNG
 
 ### PHASE 2 ###
