@@ -363,13 +363,13 @@
 	farmers = {
 		culture = venetian
 		religion = catholic
-		size = 75925
+		size = 175925
 	}
 
 	farmers = {
 		culture = north_italian
 		religion = catholic
-		size = 205925
+		size = 105925
 	}
 	
 	clergymen = {

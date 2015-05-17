@@ -78,6 +78,13 @@ country_event = {
 			relation = { who = THIS value = -200 }
 			diplomatic_influence = { who = THIS value = -200 }
 			release_vassal = THIS
+			leave_alliance = THIS
+			casus_belli = {
+				target = THIS
+				type = conquest
+				months = 12
+			}
+			
 			war = {
 				target = THIS
 				attacker_goal = {
@@ -88,7 +95,6 @@ country_event = {
 				}
 				call_ally = no
 			}
-			badboy = -22
 		}
 
 		ai_chance = {

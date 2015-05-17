@@ -143,11 +143,6 @@ HAN = {
 	level = 5
 	influence_value = 0
 }
-ION = {
-	value = 150
-	level = 5
-	influence_value = 0
-}
 
 #South America
 VNZ = {

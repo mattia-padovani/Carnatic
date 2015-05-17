@@ -6,6 +6,7 @@
 mughal_reforms = {
 	trigger = {
 		exists = yes
+		civilized = no
 		primary_culture = panjabi
 		1236 = {
 			owned_by = THIS
