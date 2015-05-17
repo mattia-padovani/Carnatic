@@ -110,7 +110,9 @@ political_decisions = {
 			prestige = 10
 			set_country_flag = claim_ukraine_n_belarus
 			BYE = { all_core = { add_core = RUS } }
-			UKR = { all_core = { add_core = RUS } }
+			RUS_955 = { add_core = RUS }
+			RUS_958 = { add_core = RUS }
+			RUS_360 = { add_core = RUS }
 		}
 		ai_will_do = {
 			factor = 1

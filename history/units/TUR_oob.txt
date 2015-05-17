@@ -108,6 +108,11 @@ WAL = {
 	level = 4
 	influence_value = 0
 }
+MON = {
+	value = 125
+	level = 4
+	influence_value = 0
+}
 
 #Other GP's
 AUS = { value = 75 }
