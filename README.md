@@ -1,3 +1,7 @@
+Mod built on HPM to add an alt history/freshen things up
+
+Currently Planned Stages - Feel free to suggest ideas
+
 #### PHASE 1 ####
 
 # DONE #
