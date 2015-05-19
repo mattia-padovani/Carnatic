@@ -6,6 +6,7 @@ REB 	= 	"countries/rebels.txt"
 ## NCO ##
 GEN	= "countries/Genoa.txt"
 HRE = "countries/Holy Roman Empire.txt"
+IBR = "countries/Iberia.txt"
 KOL = "countries/Cologne.txt"
 LOU = "countries/Louisiana.txt"
 MUN = "countries/Munster.txt"
