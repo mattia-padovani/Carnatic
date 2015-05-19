@@ -284,7 +284,10 @@ country_event = {
 		prestige = -5
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 2
 		}
@@ -412,13 +415,19 @@ country_event = {
                 badboy = 5
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 5
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 5
 		}
@@ -729,7 +738,7 @@ country_event = {
 			}
 		define_general = {
 				name = "Julius von Haynau"
-				personality = cool_minded
+				personality = audacius
 				background = war_college
 		}
 		ai_chance = {
@@ -1971,7 +1980,7 @@ country_event = {
 		define_general = {
 				name = "Guglielmo Pepe"
 				personality = romantic
-				background = renowned_adventurer
+				background = adventurer
 		}                
                 relation = {
                         who = SIC
@@ -2103,13 +2112,19 @@ country_event = {
                 set_global_flag = Manzoni
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 2
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 2
 		}
@@ -2295,7 +2310,10 @@ country_event = {
                 plurality = 2
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 1
 		}
@@ -2382,7 +2400,10 @@ country_event = {
                 plurality = 1
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 1
 		}
@@ -2427,7 +2448,10 @@ country_event = {
 		name = "There should be a law against it...!"
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 2
 		}
@@ -2439,7 +2463,10 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 1
 		}
@@ -2487,7 +2514,10 @@ country_event = {
 		name = "The Queen may be not amused..."
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 1
 		}
@@ -2843,7 +2873,10 @@ country_event = {
                 money = -2500
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 1
 		}
@@ -2881,7 +2914,10 @@ country_event = {
                 729 = { life_rating = -1}
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 1
 		}
@@ -3082,7 +3118,10 @@ country_event = {
 	trigger = {       
                 year = 1923
                 NOT = { year = 1929 }
-                primary_culture = north_italian
+				OR = {
+					primary_culture = north_italian
+					primary_culture = venetian
+				}
                 owns = 736
                 mass_culture_n_the_avant_garde = 1
                 psychoanalysis = 1
@@ -3325,13 +3364,19 @@ country_event = {
                 prestige = 10
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			militancy = 1
 		}
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 2
 		}
@@ -3349,7 +3394,10 @@ country_event = {
 	trigger = {       
                 year = 1851
                 NOT = { year = 1900 }
-                primary_culture = north_italian
+				OR = {
+					primary_culture = north_italian
+					primary_culture = venetian
+				}
                 owns = 729
 	}
 
@@ -3364,7 +3412,10 @@ country_event = {
                 prestige = 10
 		any_pop = {
 			limit = {
-				has_pop_culture = north_italian
+				OR = {
+					has_pop_culture = venetian
+					has_pop_culture = north_italian
+				}
 			}
 			consciousness = 1
 		}

@@ -69,7 +69,7 @@ political_decisions = {
 			badboy = 9
 			prestige = 20
 			set_country_flag = claim_amazon
-			BRZ_2407 = { add_core = GCO }
+			2407 = { add_core = GCO }
 			2412 = { add_core = GCO }
 			2408 = { add_core = GCO }
 			2415 = { add_core = GCO }

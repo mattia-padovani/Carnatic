@@ -21,7 +21,6 @@ political_decisions = {
 
 		allow = {
                 
-                invention = early_archaeology
                 money = 10000
 		}
 		
@@ -58,7 +57,6 @@ political_decisions = {
 			nationalism_n_imperialism = 1
                         invention = vaccination
                         invention = prophylaxis_against_malaria
-                        invention = early_archaeology
 			prestige = 75
 
                         OR = { is_greater_power = yes
@@ -95,7 +93,6 @@ political_decisions = {
 			nationalism_n_imperialism = 1
                         invention = vaccination
                         invention = prophylaxis_against_malaria
-                        invention = early_archaeology
 			owns = 1767
 		}
 		
