@@ -191,8 +191,10 @@ political_decisions = {
 	form_the_rcmp = {
 	picture = form_the_rcmp
 		potential = {
-			tag = CAN
-			tag = QUE
+			OR = {
+				tag = CAN
+				tag = QUE
+			}
 			NOT = { has_country_modifier = rcmp }
 		}
 		allow = {

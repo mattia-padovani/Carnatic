@@ -3,5 +3,6 @@ controller = MON
 add_core = MON
 add_core = CRO
 add_core = DLM
+add_core = VEN
 trade_goods = fish
 life_rating = 35

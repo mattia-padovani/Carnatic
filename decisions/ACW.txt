@@ -151,9 +151,11 @@ political_decisions = {
 	
 	enact_the_homestead_act = {
 		potential = {
-			tag = USA
-			tag = QUE
-			tag = CAN
+			OR = {
+				tag = USA
+				tag = QUE
+				tag = CAN
+			}
 			government = democracy
 			NOT = {
 				has_country_modifier = the_homestead_act

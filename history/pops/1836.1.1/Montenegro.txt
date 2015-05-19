@@ -237,18 +237,6 @@
 		size = 4650
 	}
 
-	clergymen = {
-		culture = serb
-		religion = orthodox
-		size = 100
-	}
-
-	artisans = {
-		culture = serb
-		religion = orthodox
-		size = 550
-	}
-
 	soldiers = {
 		culture = serb
 		religion = orthodox
@@ -259,6 +247,24 @@
 		culture = serb
 		religion = orthodox
 		size = 10225
+	}
+	
+	clergymen = {
+		culture = venetian
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = venetian
+		religion = catholic
+		size = 550
+	}
+	
+	farmers = {
+		culture = venetian
+		religion = catholic
+		size = 3225
 	}
 
 }

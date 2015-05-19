@@ -1842,3 +1842,54 @@ silver_age = {
 	research_points_modifier = 0.1
 	icon = 5
 }
+
+################
+# GOTT MIT UNS #
+################
+
+### Excavations ###
+
+inca_excavations = {
+	prestige = 0.02
+	icon = 5
+}
+
+inca_excavations_interrupted = {
+	prestige = -0.01
+	icon = 6
+}
+
+local_excavations = {
+	icon = 5
+}
+
+maya_excavations = {
+	prestige = 0.01
+	icon = 5
+}
+
+mesopotamian_excavations = {
+	prestige = 0.01
+	icon = 5
+}
+
+mycenaean_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+minoan_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+pompeji_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+italico_valore = {
+	war_exhaustion = -0.03
+	supply_consumption = -0.3
+	icon = 15
+}

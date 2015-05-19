@@ -614,7 +614,7 @@ political_decisions = {
 					}
 				}
 			}
-			TYR = {
+			TIR = {
 				all_core = {
 					OR = {
 						owned_by = THIS
