@@ -419,6 +419,7 @@ political_decisions = {
 				limit = {
 					is_culture_group = THIS
 					NOT = { tag = SAR }
+					NOT = { tag = VEN }
 					NOT = { has_country_flag = post_colonial_country }
 				}
 				any_owned = {
