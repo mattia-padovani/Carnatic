@@ -228,7 +228,7 @@ country_event = {
 		}
 		any_pop = {
 			limit = { is_primary_culture = yes }
-			militancy = 3
+			militancy = -3
 			consciousness = 2
 		}
 		ai_chance = {
@@ -248,6 +248,13 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				truce_with = FROM
+			}
+			modifier = {
+				factor = 1.6
+				AND = { 
+					tag = VEN
+					is_secondary_power = yes
+				}
 			}
 			modifier = {
 				factor = 1.5

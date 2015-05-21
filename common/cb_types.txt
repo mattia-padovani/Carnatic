@@ -3014,6 +3014,7 @@ restore_british_raj = {
 		}
 		THIS = {
 			tag = ENG
+			nationalism_n_imperialism = 1
 			OR = {
 				government = absolute_monarchy
 				government = prussian_constitutionalism
@@ -5701,30 +5702,39 @@ annex_india = {
 			}
 			has_country_flag = won_franco_british_war
 		}
-		civilized = no
-		is_vassal = no
 		OR = {
-			primary_culture = assamese
-			primary_culture = baluchi
-			primary_culture = bengali
-			primary_culture = bihari
-			primary_culture = manipuri
-			primary_culture = nepali
-			primary_culture = oriya
-			primary_culture = sinhala
-			primary_culture = avadhi
-			primary_culture = kanauji
-			primary_culture = kashmiri
-			primary_culture = panjabi
-			primary_culture = gujarati
-			primary_culture = marathi
-			primary_culture = sindi
-			primary_culture = rajput
-			primary_culture = kannada
-			primary_culture = malayalam
-			primary_culture = tamil
-			primary_culture = telegu
-			tag = CRL
+			civilized = no
+			AND = {
+				civilized = yes
+				NOT = {
+					OR = {
+						primary_culture = assamese
+						primary_culture = baluchi
+						primary_culture = bengali
+						primary_culture = bihari
+						primary_culture = manipuri
+						primary_culture = nepali
+						primary_culture = oriya
+						primary_culture = sinhala
+						primary_culture = avadhi
+						primary_culture = kanauji
+						primary_culture = kashmiri
+						primary_culture = panjabi
+						primary_culture = gujarati
+						primary_culture = marathi
+						primary_culture = sindi
+						primary_culture = rajput
+						primary_culture = kannada
+						primary_culture = malayalam
+						primary_culture = tamil
+						primary_culture = telegu
+					}
+				}
+			}
+		}
+		is_vassal = no
+		any_owned_province = {
+			is_core = HND
 		}
 		ai = yes
 		OR = {
@@ -5734,9 +5744,9 @@ annex_india = {
 			}
 		}
 	}
-	
+
 	allowed_states = {
-		any_owned_province = { is_colonial = no }
+		any_owned_province = { is_core = HND }
 		#NOT = { any_owned_province = { is_capital = yes } }
 		OR = {
 			THIS = { ai = no }
@@ -5797,30 +5807,39 @@ annex_india_full = {
 			}
 			has_country_flag = won_franco_british_war
 		}
-		civilized = no
 		is_vassal = no
 		OR = {
-			primary_culture = assamese
-			primary_culture = baluchi
-			primary_culture = bengali
-			primary_culture = bihari
-			primary_culture = manipuri
-			primary_culture = nepali
-			primary_culture = oriya
-			primary_culture = sinhala
-			primary_culture = avadhi
-			primary_culture = kanauji
-			primary_culture = kashmiri
-			primary_culture = panjabi
-			primary_culture = gujarati
-			primary_culture = marathi
-			primary_culture = sindi
-			primary_culture = rajput
-			primary_culture = kannada
-			primary_culture = malayalam
-			primary_culture = tamil
-			primary_culture = telegu
-			tag = CRL
+			civilized = no
+			AND = {
+				civilized = yes
+				NOT = {
+					OR = {
+						primary_culture = assamese
+						primary_culture = baluchi
+						primary_culture = bengali
+						primary_culture = bihari
+						primary_culture = manipuri
+						primary_culture = nepali
+						primary_culture = oriya
+						primary_culture = sinhala
+						primary_culture = avadhi
+						primary_culture = kanauji
+						primary_culture = kashmiri
+						primary_culture = panjabi
+						primary_culture = gujarati
+						primary_culture = marathi
+						primary_culture = sindi
+						primary_culture = rajput
+						primary_culture = kannada
+						primary_culture = malayalam
+						primary_culture = tamil
+						primary_culture = telegu
+					}
+				}
+			}
+		}
+		any_owned_province = {
+			is_core = HND
 		}
 		ai = yes
 		OR = {

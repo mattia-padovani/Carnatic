@@ -4709,7 +4709,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 64225
+		size = 45225
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 19225
 	}
 
 	clergymen = {
@@ -4753,7 +4759,7 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 42925
+		size = 30925
 	}
 
 	clergymen = {
@@ -4775,21 +4781,21 @@
 	}
 
 	clergymen = {
-		culture = irish
+		culture = louisianian
 		religion = catholic
-		size = 20
+		size = 50
 	}
 
 	artisans = {
-		culture = irish
+		culture = louisianian
 		religion = catholic
 		size = 50
 	}
 
 	farmers = {
-		culture = irish
+		culture = louisianian
 		religion = catholic
-		size = 930
+		size = 12930
 	}
 }
 #South Bend (44000/11000 POPS)
@@ -4813,9 +4819,15 @@
 	}
 
 	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 7275
+	}
+
+	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 10275
+		size = 3275
 	}
 }
 #Fort Wayne (128000/32000 POPS)
@@ -4839,9 +4851,15 @@
 	}
 
 	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 20850
+	}
+
+	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 29850
+		size = 9850
 	}
 }
 #Michigan Region (148000)
@@ -5115,7 +5133,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 41950
+		size = 21950
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 21950
 	}
 
 	clergymen = {
@@ -5171,7 +5195,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 45775
+		size = 25775
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 20775
 	}
 
 	clergymen = {
@@ -5233,7 +5263,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 34525
+		size = 24525
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 10525
 	}
 
 	clergymen = {
@@ -5277,7 +5313,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 45725
+		size = 35725
+	}
+
+	farmers = {
+		culture = lousianian
+		religion = catholic
+		size = 11725
 	}
 
 	clergymen = {
@@ -5321,7 +5363,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 49450
+		size = 30450
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 19450
 	}
 
 	clergymen = {
@@ -5401,7 +5449,13 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 36425
+		size = 26425
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 10425
 	}
 
 	clergymen = {
@@ -8624,7 +8678,19 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 25175
+		size = 10175
+	}
+
+	farmers = {
+		culture = louisianian
+		religion = catholic
+		size = 10175
+	}	
+	
+	farmers = {
+		culture = french_canadian
+		religion = catholic
+		size = 5175
 	}
 }
 #New Jersey Region (340000)  

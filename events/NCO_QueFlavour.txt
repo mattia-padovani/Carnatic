@@ -62,7 +62,7 @@ country_event = {
 		USA = { country_event = 44404 }
 		
 		ai_chance = {
-			factor = 100
+			factor = 20
 		}
 	}
 	
@@ -75,7 +75,7 @@ country_event = {
 		USA = { country_event = 44402 }
 		
 		ai_chance = {
-			factor = 0
+			factor = 80
 		}
 	}
 }
@@ -95,6 +95,9 @@ country_event = {
 			all_core = {
 				add_core = THIS
 			} 
+			small_arms = 100
+			regular_clothes = 100
+			liquor = 100
 		}
 		leave_alliance = LOU
 		casus_belli = {

@@ -404,6 +404,7 @@ political_decisions = {
 			839 = { add_core = VEN }
 			834 = { add_core = VEN }
 			805 = { add_core = VEN }
+			734 = { add_core = VEN }
 			
 			badboy = 6
 		}
@@ -433,6 +434,6 @@ political_decisions = {
 			}
 			set_country_flag = codificazione_estense_si
 		}
-	}
+	}	
 	
 }

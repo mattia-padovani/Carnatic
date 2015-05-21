@@ -6,19 +6,19 @@ leader = {
 	picture = european_admiral_6
 	date = 1831.1.1
 	type = sea
-	personality = charismatic
-	background = adventurer
+	personality = audacious
+	background = uncommonly_young
 	prestige = 0.4
 }
 
 leader = {
-	name = "Vittorio Caviglia di Verona"
+	name = "Vittorio Caviglia"
 	picture = european_general_34
 	date = 1810.1.1
 	type = land
-	personality = heroic
+	personality = au_fait
 	background = school_of_defense
-	prestige = 0.8
+	prestige = 0.4
 }
 
 leader = {
@@ -26,7 +26,7 @@ leader = {
 	picture = european_general_19
 	date = 1830.1.1
 	type = land
-	personality = dauntless
+	personality = efficient
 	background = school_of_the_bayonet
 	prestige = 0.3
 }
@@ -51,13 +51,19 @@ army = {
 	regiment = {
 		name= "3.Fanteria di Linea"
 		type = infantry
-		home = 729
+		home = 826
 	}
 	
 	regiment = {
 		name= "4.Fanteria di Linea"
 		type = infantry
-		home = 731
+		home = 769
+	}
+	
+	regiment = {
+		name= "5.Fanteria di Linea"
+		type = infantry
+		home = 728
 	}
 	
 	regiment = {
@@ -76,6 +82,18 @@ army = {
 		name= "2.Artiglieria"
 		type = artillery
 		home = 731
+	}
+
+	regiment = {
+		name= "3.Artiglieria"
+		type = artillery
+		home = 731
+	}
+	
+	regiment = {
+		name= "4.Artiglieria"
+		type = artillery
+		home = 729
 	}
 }
 
@@ -114,32 +132,52 @@ navy = {
 
 	ship = {
 		name= "1a Squadrone Transporti"
-		type = clipper_transport
+		type = steam_transport
 	}
 
 	ship = {
 		name= "2a Squadrone Transporti"
-		type = clipper_transport
+		type = steam_transport
 	}
 
 	ship = {
 		name= "3a Squadrone Transporti"
-		type = clipper_transport
+		type = steam_transport
 	}
 	
 	ship = {
 		name= "4a Squadrone Transporti"
-		type = clipper_transport
+		type = steam_transport
 	}
 
 	ship = {
 		name= "5a Squadrone Transporti"
-		type = clipper_transport
+		type = steam_transport
 	}
 
 	ship = {
 		name= "6a Squadrone Transporti"
-		type = clipper_transport
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "7a Squadrone Transporti"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "8a Squadrone Transporti"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "9a Squadrone Transporti"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "10a Squadrone Transporti"
+		type = steam_transport
 	}
 
 }

@@ -195,7 +195,7 @@ EGY = {
 
 army = {
 	name = "I. Armee"
-	location = 726
+	location = 618
 	regiment = {
 		name= "1.1. Kavalleriedivision"
 		type = cuirassier
@@ -329,12 +329,7 @@ army = {
 
 army = {
 	name = "IV. Armee"
-	location = 729
-	regiment = {
-		name= "1.4. Infanteriedivision"
-		type = infantry
-		home = 612
-	}
+	location = 774
 
 	regiment = {
 		name= "2.4. Infanteriedivision"
@@ -343,28 +338,11 @@ army = {
 	}
 
 	regiment = {
-		name= "3.4. Infanteriedivision"
-		type = infantry
-		home = 726
-	}
-
-	regiment = {
-		name= "1.5. Infanteriedivision"
-		type = infantry
-		home = 614
-	}
-
-	regiment = {
 		name= "2.5. Infanteriedivision"
 		type = infantry
 		home = 648
 	}
 
-	regiment = {
-		name= "3.5. Infanteriedivision"
-		type = infantry
-		home = 714
-	}
 }
 
 army = {
@@ -415,7 +393,7 @@ army = {
 
 navy = {
 	name = "Austrian Imperial Navy"
-	location = 729
+	location = 774
 	ship = {
 		name= "1. Klipperflottille"
 		type = clipper_transport
