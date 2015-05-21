@@ -48,6 +48,10 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = vive_le_quebec
+			add_country_modifier = {
+				name = global_baby_boom
+				duration = 4650
+			}
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				militancy = -4

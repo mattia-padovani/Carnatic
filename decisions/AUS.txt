@@ -40,7 +40,7 @@ political_decisions = {
 				all_core = { add_core = KUK }
 			}
 			CRO = {
-				all_core = { add_core = KUK }
+				add_core = KUK
 			}
 			any_pop = {
 				limit = { has_pop_culture = hungarian }

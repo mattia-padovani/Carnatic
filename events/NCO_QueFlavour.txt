@@ -62,7 +62,7 @@ country_event = {
 		USA = { country_event = 44404 }
 		
 		ai_chance = {
-			factor = 20
+			factor = 10
 		}
 	}
 	
@@ -75,7 +75,7 @@ country_event = {
 		USA = { country_event = 44402 }
 		
 		ai_chance = {
-			factor = 80
+			factor = 90
 		}
 	}
 }
@@ -118,7 +118,7 @@ country_event = {
 			limit = { has_pop_culture = louisianian }
 			militancy = 6
 		}
-		badboy = 0.8
+		badboy = 21
 		
 		ai_chance = {
 			factor = 100
@@ -187,7 +187,7 @@ country_event = {
 			limit = { has_pop_culture = louisianian }
 			militancy = 6
 		}
-		badboy = 0.8
+		badboy = 21
 		
 		ai_chance = {
 			factor = 95
@@ -311,6 +311,7 @@ country_event = {
 		political_reform = universal_weighted_voting
 		political_reform = non_secret_ballots
 		ruling_party_ideology = liberal
+		nationalvalue = nv_liberty
 		
 		add_country_modifier = {
 			name = national_confusion
@@ -401,5 +402,37 @@ country_event = {
 	
 	option = {
 		name = "There are always other means."
+	}
+}
+
+country_event = {
+	id = 44411
+	title = "Claim the West"
+	desc = "The land to the west south of the 49th has been claimed, we should do the same for the land above the 49th"
+	
+	trigger = {
+		OR = {
+			USA = { has_country_flag = hasmanifestdestiny }
+			QUE = { has_country_flag = hasmanifestdestiny }
+			LOU = { has_country_flag = hasmanifestdestiny }
+		}
+		owns = 50
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Let's do it!"
+		35 = { add_core = THIS }
+		ENG_22 = { add_core = THIS } #AB
+		CAN_13 = { add_core = THIS } #BC
+		USA_1 = { add_core = THIS } #Alaska
+		CAN_19 = { add_core = THIS } #NC
+		
+		ai_will_do = { factor = 100 }
 	}
 }

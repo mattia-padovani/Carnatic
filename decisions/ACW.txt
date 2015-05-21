@@ -338,6 +338,12 @@ political_decisions = {
 			USA_78 = { add_core = THIS } #Washington
 			USA_81 = { add_core = THIS } #Portland
 			USA_91 = { add_core = THIS } #Idaho
+			USA_124 = { add_core = THIS } #Nebraska
+			119 = { add_core = THIS } 
+			USA_121 = { add_core = THIS } #South Dakota
+			USA_116 = { add_core = THIS } #Montana
+			USA_111 = { add_core = THIS } #Wyoming
+ 
 			relation = { who = MEX value = -200 }
 			diplomatic_influence = { who = MEX value = -200 }
 			leave_alliance = MEX

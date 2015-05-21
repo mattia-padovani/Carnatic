@@ -3,6 +3,7 @@ political_decisions = {
 		picture = treaty_signing
 		potential = {
 			tag = USA
+			NOT = { has_country_flag = florida_purchase_prop }
 		}
 		
 		allow = {
@@ -12,7 +13,7 @@ political_decisions = {
 		
 		effect = {
 			USA_200 = { add_core = USA }
-			
+			set_country_flag = florida_purchase_prop
 			any_country = {
 				limit = {
 					owns = 199

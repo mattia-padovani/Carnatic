@@ -29,12 +29,6 @@ alliance = {
 		end_date = 1936.1.1
 	}
 
-alliance = {
-		first = ENG 
-		second = BHP 
-		start_date =  1835.1.1
-		end_date = 1936.1.1
-	}
 #########Prussian and their substates
 alliance = {
 		first = PRU 
