@@ -293,66 +293,6 @@ army = {
 }
 
 navy = {
-	name = "1st Squadron"
-	location = 222
-	ship = {
-		name= "Franklin"
-		type = manowar
-	}
-
-	ship = {
-		name= "Pennsylvania"
-		type = manowar
-	}
-
-	ship = {
-		name= "Washington"
-		type = manowar
-	}
-
-	ship = {
-		name= "Columbia"
-		type = frigate
-	}
-
-	ship = {
-		name= "Constellation"
-		type = frigate
-	}
-
-}
-
-navy = {
-	name = "2nd Squadron"
-	location = 248
-	ship = {
-		name= "Ohio"
-		type = manowar
-	}
-
-	ship = {
-		name= "Hudson"
-		type = frigate
-	}
-
-}
-
-navy = {
-	name = "3rd Squadron"
-	location = 214
-	ship = {
-		name= "John Adams"
-		type = frigate
-	}
-
-	ship = {
-		name= "United States"
-		type = frigate
-	}
-
-}
-
-navy = {
 	name = "4th Squadron"
 	location = 219
 	ship = {
@@ -380,35 +320,15 @@ navy = {
 		type = clipper_transport
 	}
 
-}
-
-navy = {
-	name = "1st Reserve Squadron"
-	location = 247
-	ship = {
-		name= "Alabama"
-		type = manowar
-	}
-
-	ship = {
-		name= "Vermont"
-		type = manowar
-	}
-
-	ship = {
-		name= "Virginia"
-		type = manowar
-	}
-
 	ship = {
 		name= "1st Reserve Transport"
 		type = clipper_transport
 	}
-
 }
 
+
 navy = {
-	name = "2nd Reserve Squadron"
+	name = "1st Reserve Squadron"
 	location = 214
 	ship = {
 		name= "Columbus"

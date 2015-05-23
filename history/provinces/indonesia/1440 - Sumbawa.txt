@@ -1,5 +1,5 @@
-owner = BAL
-controller = BAL
+owner = VEN
+controller = VEN
 add_core = BIM
 trade_goods = timber
 life_rating = 30

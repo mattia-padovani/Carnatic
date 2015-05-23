@@ -2263,6 +2263,24 @@
 		religion = protestant
 		size = 39000
 	}
+	
+	capitalists = {
+		culture = french_canadian
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = french_canadian
+		religion = catholic
+		size = 150
+	}
+	
+	craftsmen = {
+		culture = french_canadian
+		religion = catholic
+		size = 1500
+	}
 }
 #Windsor (36000/9000 POPS)
 54 = {
@@ -2741,8 +2759,20 @@
 		religion = catholic
 		size = 500
 	}
+	
+	capitalists = {
+		culture = french_canadian
+		religion = catholic
+		size = 150
+	}
 
 	clergymen = {
+		culture = french_canadian
+		religion = catholic
+		size = 1500
+	}
+	
+	craftsmen = {
 		culture = french_canadian
 		religion = catholic
 		size = 1500
@@ -3214,6 +3244,12 @@
 		culture = anglo_canadian
 		religion = protestant
 		size = 100
+	}
+	
+	craftsmen = {
+		culture = anglo_canadian
+		religion = protestant
+		size = 900
 	}
 
 	artisans = {

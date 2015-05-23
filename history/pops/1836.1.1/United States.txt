@@ -5123,7 +5123,25 @@
 		religion = protestant
 		size = 2250
 	}
-
+	
+	capitalists = {
+		culture = louisianian
+		religion = catholic
+		size = 150
+	}
+	
+	capitalists = {
+		culture = yankee
+		religion = protestant
+		size = 150
+	}
+	
+	craftsmen = {
+		culture = yankee
+		religion = protestant
+		size = 7250
+	}
+	
 	soldiers = {
 		culture = yankee
 		religion = protestant
@@ -5139,7 +5157,7 @@
 	farmers = {
 		culture = louisianian
 		religion = catholic
-		size = 21950
+		size = 25950
 	}
 
 	clergymen = {
@@ -5165,7 +5183,7 @@
 	bureaucrats = {
 		culture = yankee
 		religion = protestant
-		size = 575
+		size = 1575
 	}
 
 	officers = {
@@ -5317,7 +5335,7 @@
 	}
 
 	farmers = {
-		culture = lousianian
+		culture = louisianian
 		religion = catholic
 		size = 11725
 	}
@@ -7983,14 +8001,9 @@
 	farmers = {
 		culture = afro_american
 		religion = protestant
-		size = 1425
+		size = 10425
 	}
 
-	slaves = {
-		culture = afro_american
-		religion = protestant
-		size = 8000
-	}
 }
 #Huntington (100000/25000 POPS)
 218 = {
@@ -8064,13 +8077,7 @@
 	farmers = {
 		culture = afro_american
 		religion = protestant
-		size = 2425
-	}
-
-	slaves = {
-		culture = afro_american
-		religion = protestant
-		size = 7000
+		size = 12425
 	}
 }
 #Maryland Region (452000)
@@ -8850,6 +8857,18 @@
 		religion = protestant
 		size = 1100
 	}
+	
+	capitalists = {
+		culture = yankee
+		religion = protestant
+		size = 150
+	}
+	
+	craftsmen = {
+		culture = yankee
+		religion = protestant
+		size = 3250
+	}
 
 	soldiers = {
 		culture = yankee
@@ -9260,55 +9279,55 @@
 #Hartford (304000/76000 POPS)
 241 = {
 	bureaucrats = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 150
 	}
 
 	officers = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 75
 	}
 
 	capitalists = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 15
 	}
 
 	clergymen = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 550
 	}
 
 	clerks = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 50
 	}
 
 	craftsmen = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 550
 	}
 
 	artisans = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 3050
 	}
 
 	soldiers = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 2000
 	}
 
 	farmers = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 66560
 	}
@@ -9336,55 +9355,55 @@
 #Providence (104000/26000 POPS)
 242 = {
 	bureaucrats = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 50
 	}
 
 	officers = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 25
 	}
 
 	capitalists = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 25
 	}
 
 	clergymen = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 175
 	}
 
 	clerks = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 75
 	}
 
 	craftsmen = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 750
 	}
 
 	artisans = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 4175
 	}
 
 	soldiers = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 250
 	}
 
 	farmers = {
-		culture = yankee
+		culture = anglo_canadian
 		religion = protestant
 		size = 19475
 	}
