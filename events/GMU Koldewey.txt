@@ -38,9 +38,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                
-		has_country_modifier = building_panama_canal
-		has_global_flag = building_panama_canal_phase1
+		
+		owns = 1723
+		has_global_flag = panama_under_construction
 
 	}
  
@@ -56,24 +56,24 @@ country_event = {
 
 	option = {
 		name = "Marcus, give me my bullwhip!" 
-                set_global_flag = maya_ruins
+		set_global_flag = maya_ruins
 		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }
-                                country_event = 201001
-                }
+				country_event = 201001
+		}
 		any_country = {
 			limit = {
-                                is_secondary_power = yes
+				is_secondary_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }
-                                country_event = 201001
+				country_event = 201001
 		}
 	}	
 }
@@ -130,8 +130,8 @@ country_event = {
 	
 	option = {
 		name = "Odd people. What is so interesting about some stones in the jungle?"
-                plurality = 1
-                money = 10000
+		plurality = 1
+		money = 10000
 		FROM = {
 			country_event = 201004
 		}
@@ -139,7 +139,7 @@ country_event = {
 			factor = 60
 			modifier = {
 				factor = 1.5
-                                FROM = { owns = 1723 }
+				FROM = { owns = 1723 }
 			}
 			modifier = {
 				factor = 1.5
@@ -166,7 +166,7 @@ country_event = {
 	
 	option = {
 		name = "That's our jungle!"
-                prestige = 1
+		prestige = 1
 		FROM = {
 			country_event = 201005
 		}
@@ -174,7 +174,7 @@ country_event = {
 			factor = 40
 			modifier = {
 				factor = 0.5
-                                FROM = { owns = 1723 }
+				FROM = { owns = 1723 }
 			}
 			modifier = {
 				factor = 0.5
@@ -239,7 +239,7 @@ country_event = {
 	
 	option = {
 		name = "Where is my fedora?"
-                money = -10000
+		money = -10000
 		add_country_modifier = {
 			name = maya_excavations
 			duration = -1
@@ -282,10 +282,10 @@ country_event = {
 			who = FROM
 			value = 5
 		}
-                money = -50000
+		money = -50000
 		prestige = -10
-                plurality = -1
-                badboy = 1
+		plurality = -1
+		badboy = 1
 		add_country_modifier = {
 			name = maya_excavations
 			duration = -1
@@ -324,10 +324,10 @@ country_event = {
 	
 	option = {
 		name = "We are convinced. They should have access."
-                plurality = 1
-                prestige = 10
-                money = 50000
-                badboy = 1
+		plurality = 1
+		prestige = 10
+		money = 50000
+		badboy = 1
 		relation = {
 			who = FROM
 			value = 10
@@ -353,8 +353,8 @@ country_event = {
 	
 	option = {
 		name = "They should have access to our mountains. If they pay, naturally."
-                plurality = 1
-                money = 10000
+		plurality = 1
+		money = 10000
 		FROM = {
 			country_event = 201008
 		}
@@ -389,7 +389,7 @@ country_event = {
 	
 	option = {
 		name = "Our mountains, our heritage!"
-                prestige = 1
+		prestige = 1
 		FROM = {
 			country_event = 201009
 		}
@@ -431,7 +431,7 @@ country_event = {
 	
 	option = {
 		name = "Bye, Junior, I've got something to do..."
-                money = -10000
+		money = -10000
 		add_country_modifier = {
 			name = inca_excavations
 			duration = -1
@@ -484,8 +484,8 @@ country_event = {
 	
 	option = {
 		name = "If they want dirt, give them dirt."
-                plurality = 1
-                money = 10000
+		plurality = 1
+		money = 10000
 		set_global_flag = mesopotamian_excavation_rights
 		FROM = {
 			country_event = 201011
@@ -519,7 +519,7 @@ country_event = {
 	
 	option = {
 		name = "I've got a jar of dirt, I've got a jar of dirt!"
-                prestige = 1
+		prestige = 1
 		FROM = {
 			country_event = 201012
 		}
@@ -539,7 +539,7 @@ country_event = {
 	
 	option = {
 		name = "I didn't expect anything else."
-                money = -10000
+		money = -10000
 		add_country_modifier = {
 			name = mesopotamian_excavations
 			duration = -1
@@ -586,56 +586,48 @@ country_event = {
 	id = 201013
 
 	trigger = {
-                    NOT = { has_country_flag = had_arch_exhibition }
-                    has_country_flag = museum_build
-                    OR = { has_country_modifier = mesopotamian_excavations
-                           has_country_modifier = inca_excavations
-                           has_country_modifier = maya_excavations
-                           has_country_modifier = egyptian_excavations
-                           has_country_modifier = mycenaean_excavations
-                         }
-                           
+		    NOT = { has_country_flag = had_arch_exhibition }
+		    has_country_flag = museum_build
+		    OR = { has_country_modifier = mesopotamian_excavations
+		           has_country_modifier = inca_excavations
+		           has_country_modifier = maya_excavations
+		           has_country_modifier = egyptian_excavations
+		           has_country_modifier = mycenaean_excavations
+		         }
+		           
 	}
  
 	mean_time_to_happen =  {
 		months = 800
-                modifier = {
-			factor = 0.9
-			
-		}
-                modifier = {
-			factor = 0.9
-			
-		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = egyptian_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
 			has_country_modifier = mesopotamian_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
 			has_country_modifier = inca_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
 			has_country_modifier = maya_excavations 
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
 			has_country_modifier = mycenaean_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
 			has_country_modifier = minoan_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
 			has_country_modifier = pompeji_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.7
 			has_country_flag = archaeological_society
 		}
@@ -648,27 +640,27 @@ country_event = {
 
 	option = {
 		name = "Archaeology is an amazing science." 
-                plurality = 1
-                prestige = 10
+		plurality = 1
+		prestige = 10
 		years_of_research = 0.12
-                set_country_flag = had_arch_exhibition
+		set_country_flag = had_arch_exhibition
 
 	}
 	option = {
 		name = "We should invite the major powers. They will be envious." 
-                set_country_flag = had_arch_exhibition
-                plurality = 1
-                prestige = 15
-                badboy = -2
+		set_country_flag = had_arch_exhibition
+		plurality = 1
+		prestige = 15
+		badboy = -2
 		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }
-                                country_event = 201014
-                }
+				country_event = 201014
+		}
 	}	
 }
 
@@ -702,20 +694,20 @@ country_event = {
 	id = 201015
 
 	trigger = {
-                    is_greater_power = yes
-                    NOT = { has_country_flag = local_excavation }
-                    has_country_flag = blamed_by_other_archaeologists
-                    idealism = 1
-                    NOT = { has_country_modifier = mesopotamian_excavations
-                            has_country_modifier = inca_excavations
-                            has_country_modifier = maya_excavations
-                            has_country_modifier = egyptian_excavations
-                            has_country_modifier = mycenaean_excavations
-                            has_country_modifier = minoan_excavations
-                            has_country_modifier = pompeji_excavations
-                          }
-                    NOT = {  }
-                           
+		    is_greater_power = yes
+		    NOT = { has_country_flag = local_excavation }
+		    has_country_flag = blamed_by_other_archaeologists
+		    idealism = 1
+		    NOT = { has_country_modifier = mesopotamian_excavations
+		            has_country_modifier = inca_excavations
+		            has_country_modifier = maya_excavations
+		            has_country_modifier = egyptian_excavations
+		            has_country_modifier = mycenaean_excavations
+		            has_country_modifier = minoan_excavations
+		            has_country_modifier = pompeji_excavations
+		          }
+		    NOT = {  }
+		           
 	}
  
 	mean_time_to_happen =  {
@@ -729,9 +721,9 @@ country_event = {
 
 	option = {
 		name = "What a splendid idea!" 
-                money = -75000
-                prestige = 2
-                set_country_flag = local_excavation
+		money = -75000
+		prestige = 2
+		set_country_flag = local_excavation
 		ai_chance = {
 			factor = 75
 			modifier = {
@@ -742,8 +734,8 @@ country_event = {
 	}
 	option = {
 		name = "Wasted money." 
-                set_country_flag = local_excavation
-                prestige = -1
+		set_country_flag = local_excavation
+		prestige = -1
 		ai_chance = {
 			factor = 25
 		}
@@ -757,10 +749,10 @@ country_event = {
 	id = 201017
 
 	trigger = {
-                    is_greater_power = yes
-                    NOT = { has_country_flag = local_excavation_end }
-                    has_country_flag = local_excavation
-                           
+		    is_greater_power = yes
+		    NOT = { has_country_flag = local_excavation_end }
+		    has_country_flag = local_excavation
+		           
 	}
  
 	mean_time_to_happen =  {
@@ -774,13 +766,13 @@ country_event = {
 
 	option = {
 		name = "Our researchs were not for nothing." 
-                	add_country_modifier = {
+			add_country_modifier = {
 			name = local_excavations
 			duration = -1
 		}
-                prestige = 3
+		prestige = 3
 		years_of_research = 0.01
-                set_country_flag = local_excavation_end
+		set_country_flag = local_excavation_end
 
 	}
 }
@@ -792,34 +784,30 @@ country_event = {
 	id = 201018
 
 	trigger = {
-                    NOT = { has_country_flag = archaeological_society }
-                    
-                    has_country_flag = museum_build
-                    OR = { has_country_modifier = mesopotamian_excavations
-                           has_country_modifier = inca_excavations
-                           has_country_modifier = maya_excavations
-                           has_country_modifier = egyptian_excavations
-                           has_country_modifier = mycenaean_excavations
-                           has_country_modifier = minoan_excavations
-                           has_country_modifier = pompeji_excavations
-                         }                           
+		    NOT = { has_country_flag = archaeological_society }
+		    
+		    has_country_flag = museum_build
+		    OR = { has_country_modifier = mesopotamian_excavations
+		           has_country_modifier = inca_excavations
+		           has_country_modifier = maya_excavations
+		           has_country_modifier = egyptian_excavations
+		           has_country_modifier = mycenaean_excavations
+		           has_country_modifier = minoan_excavations
+		           has_country_modifier = pompeji_excavations
+		         }		           
 	}
  
 	mean_time_to_happen =  {
 		months = 400
-                modifier = {
-			factor = 0.9
-			
-		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = mesopotamian_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = inca_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			is_greater_power = yes 
 		}
@@ -831,9 +819,9 @@ country_event = {
 
 	option = {
 		name = "At least it's better than this so-called 'Super Adventure Club'." 
-                prestige = 10
+		prestige = 10
 		years_of_research = 0.05
-                set_country_flag = archaeological_society
+		set_country_flag = archaeological_society
 
 	}
 }
@@ -845,35 +833,35 @@ country_event = {
 	id = 201019
 
 	trigger = {
-                    has_country_flag = archaeological_society
-                    
-                    has_country_flag = museum_build
-                    NOT = { has_country_flag = famous_archaeologist }
-                    OR = { has_country_modifier = mesopotamian_excavations
-                           has_country_modifier = inca_excavations
-                           has_country_modifier = maya_excavations
-                           has_country_modifier = egyptian_excavations
-                           has_country_modifier = mycenaean_excavations
-                           has_country_modifier = minoan_excavations
-                           has_country_modifier = pompeji_excavations
-                         }                           
+		    has_country_flag = archaeological_society
+		    
+		    has_country_flag = museum_build
+		    NOT = { has_country_flag = famous_archaeologist }
+		    OR = { has_country_modifier = mesopotamian_excavations
+		           has_country_modifier = inca_excavations
+		           has_country_modifier = maya_excavations
+		           has_country_modifier = egyptian_excavations
+		           has_country_modifier = mycenaean_excavations
+		           has_country_modifier = minoan_excavations
+		           has_country_modifier = pompeji_excavations
+		         }		           
 	}
  
 	mean_time_to_happen =  {
 		months = 200
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = mesopotamian_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = inca_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = had_arch_exhibition
+		        has_country_flag = had_arch_exhibition
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9 
 			is_greater_power = yes 
 		}
@@ -886,14 +874,14 @@ country_event = {
 	option = {
 		name = "He should serve as an example for our scientific society." 
 		years_of_research = 0.05
-                set_country_flag = famous_archaeologist
+		set_country_flag = famous_archaeologist
 
 	}
 
 	option = {
 		name = "He should serve as an example for our nation." 
-                prestige = 5
-                set_country_flag = famous_archaeologist
+		prestige = 5
+		set_country_flag = famous_archaeologist
 	}
 }
 
@@ -917,31 +905,31 @@ country_event = {
 	
 	option = {
 		name = "Invite the Great powers to an exhibition and give free entrance." 
-                badboy = -1
+		badboy = -1
        		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }    relation = {
-	                     who = THIS
-	                     value = 50
-                             }
-                }         
+			     who = THIS
+			     value = 50
+		             }
+		}         
 
 	}
 	option = {
 		name = "Invite the Great powers and ridicule them." 
 		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }       prestige = -10
-		                set_country_flag = blamed_by_other_archaeologists
-                }
+				set_country_flag = blamed_by_other_archaeologists
+		}
 	}	
 }
 
@@ -961,31 +949,31 @@ country_event = {
 	
 	option = {
 		name = "Invite the Great powers to an exhibition and give free entrance."
-                badboy = -0.5 
+		badboy = -0.5 
        		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }    relation = {
-	                     who = THIS
-	                     value = 25
-                             }
-                }         
+			     who = THIS
+			     value = 25
+		             }
+		}         
 
 	}
 	option = {
 		name = "Invite the Great powers and ridicule them." 
 		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }       prestige = -5
-		                set_country_flag = blamed_by_other_archaeologists
-                }
+				set_country_flag = blamed_by_other_archaeologists
+		}
 	}	
 }
 
@@ -1005,31 +993,31 @@ country_event = {
 	
 	option = {
 		name = "Invite the Great powers to an exhibition and give free entrance." 
-                badboy = -0.5 
+		badboy = -0.5 
        		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }    relation = {
-	                     who = THIS
-	                     value = 25
-                             }
-                }         
+			     who = THIS
+			     value = 25
+		             }
+		}         
 
 	}
 	option = {
 		name = "Invite the Great powers and ridicule them." 
 		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }       prestige = -5
-		                set_country_flag = blamed_by_other_archaeologists
-                }
+				set_country_flag = blamed_by_other_archaeologists
+		}
 	}	
 }
 
@@ -1051,13 +1039,13 @@ country_event = {
 		name = "Invite the Great powers and ridicule them." 
 		any_country = {
 			limit = {
-                                is_greater_power = yes
+				is_greater_power = yes
 				NOT = {
 					tag = THIS
 				}
 		        }       prestige = -5
-		                set_country_flag = blamed_by_other_archaeologists
-                }
+				set_country_flag = blamed_by_other_archaeologists
+		}
 	}
 }
 
@@ -1091,19 +1079,15 @@ country_event = {
 		months = 350
 		modifier = {
 			factor = 0.9
-			
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
-		}
-                modifier = {
-			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
@@ -1123,25 +1107,25 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-                NOT = { tag = FRA }
-                NOT = { has_country_flag = belloq_wins }
-                NOT = { has_country_flag = belloq_loses }
-                NOT = { has_country_flag = pyramid_found }
+		NOT = { tag = FRA }
+		NOT = { has_country_flag = belloq_wins }
+		NOT = { has_country_flag = belloq_loses }
+		NOT = { has_country_flag = pyramid_found }
 	}
 
 	mean_time_to_happen = {
 		months = 500
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.7
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 		modifier = {
 			factor = 0.6
@@ -1152,7 +1136,7 @@ country_event = {
 	option = {
 		name = "I will go first. *drags a fedora deep in his face*"
 		years_of_research = 0.15
-                set_country_flag = pyramid_found
+		set_country_flag = pyramid_found
 	}
 }
 
@@ -1165,33 +1149,29 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-                tag = FRA
+		tag = FRA
 	}
 
 	mean_time_to_happen = {
 		months = 600
 		modifier = {
 			factor = 0.9
-			
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
-		}
-                modifier = {
-			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
 		name = "So once again, Jones, what was briefly yours is now mine."
 		years_of_research = 0.15
-                prestige = 15
+		prestige = 15
 	}
 }
 
@@ -1204,35 +1184,32 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-                NOT = { tag = FRA }
-                OR = { has_country_flag = belloq_wins
-                       has_country_flag = belloq_loses }
+		NOT = { tag = FRA }
+		OR = { has_country_flag = belloq_wins
+		       has_country_flag = belloq_loses }
 	}
 
 	mean_time_to_happen = {
 		months = 600
+
 		modifier = {
 			factor = 0.9
-			
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
-		}
-                modifier = {
-			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
 		name = "Enough pyramid-adventures for me!"
 		years_of_research = 0.15
-                prestige = 15
+		prestige = 15
 	}
 }
 
@@ -1253,25 +1230,25 @@ country_event = {
 			factor = 1.2
 			
 		}
-                modifier = {
+		modifier = {
 			factor = 1.3
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 1.4
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
 		name = "That was clearly a great adventure. These scientists are heroes!"
-                money = -10000
-                prestige = -5
-		years_of_research = 0.05                
+		money = -10000
+		prestige = -5
+		years_of_research = 0.05		
 	}
 	option = {
 		name = "Dinosaurs? Hidden valley? Are you kidding me?!"
-                prestige = 5
+		prestige = 5
 		years_of_research = -0.05
 	}
 }
@@ -1292,41 +1269,38 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 1000
+
 		modifier = {
-			factor = 0.9
-			
-		}
-                modifier = {
 			factor = 0.9
 			has_country_modifier = mesopotamian_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = inca_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = mycenaean_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = minoan_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = had_arch_exhibition
+		        has_country_flag = had_arch_exhibition
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
@@ -1337,7 +1311,7 @@ country_event = {
 		prestige = 50
 		years_of_research = 0.5
 		set_global_flag = mirador_found
-                country_event = 201038
+		country_event = 201038
 	}
 }
 
@@ -1354,7 +1328,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_found
-                NOT = { has_country_flag = pyramid_riddle }
+		NOT = { has_country_flag = pyramid_riddle }
 	}
 
 	mean_time_to_happen = {
@@ -1363,7 +1337,7 @@ country_event = {
 
 	option = {
 		name = "Stockpile the most useless stuff in the world? What?"
-                set_country_flag = pyramid_riddle
+		set_country_flag = pyramid_riddle
 	}
 }
 
@@ -1375,10 +1349,10 @@ country_event = {
 	picture = "Maya_pyramid"
 
 	trigger = {
-                has_country_flag = pyramid_riddle 
-                fertilizer = 1
-                NOT = { has_country_flag = pyramid_riddle_solved_artefact_scene }
-                NOT = { has_country_flag = pyramid_riddle_solved_escape }
+		has_country_flag = pyramid_riddle 
+		fertilizer = 1
+		NOT = { has_country_flag = pyramid_riddle_solved_artefact_scene }
+		NOT = { has_country_flag = pyramid_riddle_solved_escape }
 	}
 
 	mean_time_to_happen = {
@@ -1387,14 +1361,14 @@ country_event = {
 
 	option = {
 		name = "Gently... carefully... I'll do it..."
-                set_country_flag = pyramid_riddle_solved_artefact_scene
-                prestige = 1
-                fertilizer = -1
+		set_country_flag = pyramid_riddle_solved_artefact_scene
+		prestige = 1
+		fertilizer = -1
 	}
 	option = {
 		name = "I know this scene - it never works out. Grab the damn artefact and RUN!"
-                set_country_flag = pyramid_riddle_solved_escape
-                prestige = -1
+		set_country_flag = pyramid_riddle_solved_escape
+		prestige = -1
 	}
 }
 
@@ -1407,7 +1381,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_artefact_scene
-                NOT = { has_country_flag = pyramid_riddle_solved_escape_1 }
+		NOT = { has_country_flag = pyramid_riddle_solved_escape_1 }
 	}
 
 	mean_time_to_happen = {
@@ -1416,7 +1390,7 @@ country_event = {
 
 	option = {
 		name = "RUN!"
-                set_country_flag = pyramid_riddle_solved_escape_1
+		set_country_flag = pyramid_riddle_solved_escape_1
 	}
 }
 
@@ -1429,7 +1403,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_escape
-                NOT = { has_country_flag = pyramid_riddle_solved_escape_2 }
+		NOT = { has_country_flag = pyramid_riddle_solved_escape_2 }
 	}
 
 	mean_time_to_happen = {
@@ -1438,7 +1412,7 @@ country_event = {
 
 	option = {
 		name = "I had seen this coming, damn!"
-                set_country_flag = pyramid_riddle_solved_escape_2
+		set_country_flag = pyramid_riddle_solved_escape_2
 	}
 }
 
@@ -1451,7 +1425,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_escape_1
-                NOT = { has_country_flag = belloq_wins }
+		NOT = { has_country_flag = belloq_wins }
 	}
 
 	mean_time_to_happen = {
@@ -1460,10 +1434,10 @@ country_event = {
 
 	option = {
 		name = "Damn you, Belloq!"
-                set_country_flag = belloq_wins
-                prestige = -10
+		set_country_flag = belloq_wins
+		prestige = -10
 		remove_country_modifier = maya_excavations
-                FRA = { country_event = 201023 }
+		FRA = { country_event = 201023 }
 	}
 }
 
@@ -1476,7 +1450,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_escape_2
-                NOT = { has_country_flag = belloq_loses }
+		NOT = { has_country_flag = belloq_loses }
 	}
 
 	mean_time_to_happen = {
@@ -1485,8 +1459,8 @@ country_event = {
 
 	option = {
 		name = "Back home!"
-                set_country_flag = belloq_wins
-                prestige = 15
+		set_country_flag = belloq_wins
+		prestige = 15
 	}
 }
 
@@ -1509,17 +1483,17 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 300
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
@@ -1543,24 +1517,24 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 500
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
 		name = "Incredible!"
 		years_of_research = 0.10
-                prestige = 10
+		prestige = 10
 	}
 }
 
@@ -1577,21 +1551,21 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 400
-                modifier = {
+		modifier = {
 			factor = 1.3
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 1.3
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
 		name = "We must begin over again!"
-                money = -5000
-                prestige = -5
-		years_of_research = -0.05                
+		money = -5000
+		prestige = -5
+		years_of_research = -0.05		
 	}
 }
 
@@ -1611,25 +1585,25 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 700
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = inca_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = had_arch_exhibition
+		        has_country_flag = had_arch_exhibition
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+		        has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+		        has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+		        has_country_flag = famous_archaeologist
 		}
 	}
 
@@ -1640,7 +1614,7 @@ country_event = {
 		prestige = 50
 		years_of_research = 0.5
 		set_global_flag = tower_of_babel_found
-                country_event = 201039
+		country_event = 201039
 	}
 }
 
@@ -1688,12 +1662,12 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_preparations
-                ai = no
-                aeroplanes = 1
+		has_country_flag = inca_expedition_preparations
+		ai = no
+		aeroplanes = 1
 	        automobiles = 1
-                canned_food = 2
-                fuel = 3
+		canned_food = 2
+		fuel = 3
 		NOT = {
 			has_country_flag = inca_expedition_begins
 		}
@@ -1707,24 +1681,24 @@ country_event = {
 
 	option = {
 		name = "We go by car."
-                automobiles = -1
-                fuel = -1
-                canned_food = -2
+		automobiles = -1
+		fuel = -1
+		canned_food = -2
 		set_country_flag = inca_expedition_begins
 		set_country_flag = inca_expedition_car
 	}
 	option = {
 		name = "Taking the aeroplane is modern archaeological standard."
-                aeroplanes = -1
-                fuel = -1
-                canned_food = -2
+		aeroplanes = -1
+		fuel = -1
+		canned_food = -2
 		set_country_flag = inca_expedition_begins
 		set_country_flag = inca_expedition_airplane
 	}
 	option = {
 		name = "What about Lamas?"
-                money = -200
-                canned_food = -2
+		money = -200
+		canned_food = -2
 		set_country_flag = inca_expedition_begins
 		set_country_flag = inca_expedition_lama
 	}
@@ -1743,7 +1717,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_car
+		has_country_flag = inca_expedition_car
 		NOT = {
 			has_country_flag = inca_expedition_bridge_yes
 		}
@@ -1765,7 +1739,7 @@ country_event = {
 	option = {
 		name = "That is too dangerous. Let's try another way."
 		set_country_flag = inca_expedition_bridge_no
-                fuel = -1
+		fuel = -1
 	}
 }
 
@@ -1778,7 +1752,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_bridge_yes
+		has_country_flag = inca_expedition_bridge_yes
 	}
 
 
@@ -1790,8 +1764,8 @@ country_event = {
 	option = {
 		name = "Bloody perfidious Inca bridge!"
 		remove_country_modifier = inca_excavations
-                clr_country_flag = inca_expedition_bridge_yes
-                clr_country_flag = inca_expedition_bridge_no
+		clr_country_flag = inca_expedition_bridge_yes
+		clr_country_flag = inca_expedition_bridge_no
 		clr_country_flag = inca_expedition_car
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -1807,7 +1781,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_bridge_no
+		has_country_flag = inca_expedition_bridge_no
 	}
 
 
@@ -1819,8 +1793,8 @@ country_event = {
 	option = {
 		name = "We must give up and return home."
 		remove_country_modifier = inca_excavations
-                clr_country_flag = inca_expedition_bridge_yes
-                clr_country_flag = inca_expedition_bridge_no
+		clr_country_flag = inca_expedition_bridge_yes
+		clr_country_flag = inca_expedition_bridge_no
 		clr_country_flag = inca_expedition_car
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -1840,9 +1814,9 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_airplane
-                NOT = { has_country_flag = inca_expedition_fly_higher }
-                NOT = { has_country_flag = inca_expedition_fly_lower }
+		has_country_flag = inca_expedition_airplane
+		NOT = { has_country_flag = inca_expedition_fly_higher }
+		NOT = { has_country_flag = inca_expedition_fly_lower }
 	}
 
 
@@ -1854,12 +1828,12 @@ country_event = {
 	option = {
 		name = "Fly higher."
 		set_country_flag = inca_expedition_fly_higher
-                fuel = -1
+		fuel = -1
 	}
 	option = {
 		name = "Fly lower."
 		set_country_flag = inca_expedition_fly_lower
-                fuel = -1
+		fuel = -1
 	}
 }
 
@@ -1872,7 +1846,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_fly_lower
+		has_country_flag = inca_expedition_fly_lower
 	}
 
 
@@ -1884,7 +1858,7 @@ country_event = {
 	option = {
 		name = "At least, we are alive."
 		remove_country_modifier = inca_excavations
-                clr_country_flag = inca_expedition_fly_lower
+		clr_country_flag = inca_expedition_fly_lower
 		clr_country_flag = inca_expedition_airplane
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -1900,9 +1874,9 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_fly_higher
-                NOT = { has_country_flag = inca_expedition_landing }
-                NOT = { has_country_flag = inca_expedition_better_place }
+		has_country_flag = inca_expedition_fly_higher
+		NOT = { has_country_flag = inca_expedition_landing }
+		NOT = { has_country_flag = inca_expedition_better_place }
 	}
 
 
@@ -1914,12 +1888,12 @@ country_event = {
 	option = {
 		name = "Land, now!"
 		set_country_flag = inca_expedition_landing
-                fuel = -1
+		fuel = -1
 	}
 	option = {
 		name = "Search a better place."
 		set_country_flag = inca_expedition_better_place
-                fuel = -1
+		fuel = -1
 	}
 }
 
@@ -1932,7 +1906,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_better_place
+		has_country_flag = inca_expedition_better_place
 	}
 
 
@@ -1944,8 +1918,8 @@ country_event = {
 	option = {
 		name = "I am sure, that this temple can't be far away..."
 		remove_country_modifier = inca_excavations
-                clr_country_flag = inca_expedition_better_place
-                clr_country_flag = inca_expedition_fly_higher
+		clr_country_flag = inca_expedition_better_place
+		clr_country_flag = inca_expedition_fly_higher
 		clr_country_flag = inca_expedition_airplane
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -1961,8 +1935,8 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_landing
-                NOT = { has_country_flag = temple_of_the_sun }
+		has_country_flag = inca_expedition_landing
+		NOT = { has_country_flag = temple_of_the_sun }
 	}
 
 
@@ -1974,9 +1948,9 @@ country_event = {
 	option = {
 		name = "In the name of archaeology, I will lift the Incan secrets..."
 		set_country_flag = temple_of_the_sun
-                prestige = 1
-                clr_country_flag = inca_expedition_landed
-                clr_country_flag = inca_expedition_fly_higher
+		prestige = 1
+		clr_country_flag = inca_expedition_landed
+		clr_country_flag = inca_expedition_fly_higher
 		clr_country_flag = inca_expedition_airplane
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -1996,9 +1970,9 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_lama
-                NOT = { has_country_flag = inca_expedition_lama_yes }
-                NOT = { has_country_flag = inca_expedition_lama_no }
+		has_country_flag = inca_expedition_lama
+		NOT = { has_country_flag = inca_expedition_lama_yes }
+		NOT = { has_country_flag = inca_expedition_lama_no }
 	}
 
 
@@ -2013,7 +1987,7 @@ country_event = {
 	}
 	option = {
 		name = "We shouldn't trust him, if he is aware of Manco Capac."
-                money = -1800
+		money = -1800
 		set_country_flag = inca_expedition_lama_no
 	}
 }
@@ -2027,8 +2001,8 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_lama
-                has_country_flag = inca_expedition_lama_yes
+		has_country_flag = inca_expedition_lama
+		has_country_flag = inca_expedition_lama_yes
 	}
 
 
@@ -2040,7 +2014,7 @@ country_event = {
 	option = {
 		name = "Maybe he was bribed by Belloq..."
 		remove_country_modifier = inca_excavations
-                clr_country_flag = inca_expedition_lama_yes
+		clr_country_flag = inca_expedition_lama_yes
 		clr_country_flag = inca_expedition_lama
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -2056,10 +2030,10 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_lama
-                has_country_flag = inca_expedition_lama_no
-                NOT = { has_country_flag = inca_expedition_ok }
-                NOT = { has_country_flag = inca_expedition_false }
+		has_country_flag = inca_expedition_lama
+		has_country_flag = inca_expedition_lama_no
+		NOT = { has_country_flag = inca_expedition_ok }
+		NOT = { has_country_flag = inca_expedition_false }
 	}
 
 
@@ -2095,8 +2069,8 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_lama
-                has_country_flag = inca_expedition_false 
+		has_country_flag = inca_expedition_lama
+		has_country_flag = inca_expedition_false 
 	}
 
 
@@ -2108,8 +2082,8 @@ country_event = {
 	option = {
 		name = "We should have trusted the native leader..."
 		remove_country_modifier = inca_excavations
-                clr_country_flag = inca_expedition_false
-                clr_country_flag = inca_expedition_lama_no
+		clr_country_flag = inca_expedition_false
+		clr_country_flag = inca_expedition_lama_no
 		clr_country_flag = inca_expedition_lama
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -2126,8 +2100,8 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = inca_expedition_lama
-                has_country_flag = inca_expedition_ok 
+		has_country_flag = inca_expedition_lama
+		has_country_flag = inca_expedition_ok 
 	}
 
 
@@ -2139,9 +2113,9 @@ country_event = {
 	option = {
 		name = "In the name of archaeology, I will lift the Incan secrets..."
 		set_country_flag = temple_of_the_sun
-                prestige = 1
-                clr_country_flag = inca_expedition_ok
-                clr_country_flag = inca_expedition_lama_no
+		prestige = 1
+		clr_country_flag = inca_expedition_ok
+		clr_country_flag = inca_expedition_lama_no
 		clr_country_flag = inca_expedition_lama
 		clr_country_flag = inca_expedition_begins
 		clr_country_flag = inca_expedition_preparations
@@ -2162,7 +2136,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                war = yes
+		war = yes
 	}
 
 
@@ -2191,7 +2165,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations_interrupted
-                war = no
+		war = no
 	}
 
 
@@ -2224,7 +2198,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = temple_of_the_sun
+		has_country_flag = temple_of_the_sun
 		NOT = {
 			has_country_flag = temple_of_the_sun_sacrifice
 		}
@@ -2252,15 +2226,15 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = temple_of_the_sun_sacrifice
+		has_country_flag = temple_of_the_sun_sacrifice
 		NOT = {
 			has_country_flag = temple_of_the_sun_begins
 		}
-                cattle = 1
-                fruit = 1
-                grain = 1
-                fish = 1
-                wool = 5
+		cattle = 1
+		fruit = 1
+		grain = 1
+		fish = 1
+		wool = 5
 	}
 
 
@@ -2272,29 +2246,29 @@ country_event = {
 	option = {
 		name = "We go upstairs."
 		set_country_flag = temple_of_the_sun_begins
-                set_country_flag = temple_of_the_sun_upstairs
-                cattle = -1
-                fruit = -1
-                grain = -1
-                wool = -5
+		set_country_flag = temple_of_the_sun_upstairs
+		cattle = -1
+		fruit = -1
+		grain = -1
+		wool = -5
 	}
 	option = {
 		name = "We go downstairs."
 		set_country_flag = temple_of_the_sun_begins
-                set_country_flag = temple_of_the_sun_downstairs
-                cattle = -1
-                fruit = -1
-                grain = -1
-                wool = -5
+		set_country_flag = temple_of_the_sun_downstairs
+		cattle = -1
+		fruit = -1
+		grain = -1
+		wool = -5
 	}
 	option = {
 		name = "We take the corridor."
 		set_country_flag = temple_of_the_sun_begins
-                set_country_flag = temple_of_the_sun_corridor
-                cattle = -1
-                fruit = -1
-                grain = -1
-                wool = -5
+		set_country_flag = temple_of_the_sun_corridor
+		cattle = -1
+		fruit = -1
+		grain = -1
+		wool = -5
 	}
 }
 
@@ -2309,7 +2283,7 @@ country_event = {
 	trigger = {
 		has_country_modifier = inca_excavations
 		has_country_flag = temple_of_the_sun_begins
-                has_country_flag = temple_of_the_sun_downstairs
+		has_country_flag = temple_of_the_sun_downstairs
 	}
 
 
@@ -2321,7 +2295,7 @@ country_event = {
 	option = {
 		name = "Snakes! I HATE SNAKES!"
 		remove_country_modifier = inca_excavations
-                clr_country_flag = temple_of_the_sun_downstairs
+		clr_country_flag = temple_of_the_sun_downstairs
 		clr_country_flag = temple_of_the_sun_begins
 		clr_country_flag = temple_of_the_sun_sacrifice
 	}
@@ -2338,7 +2312,7 @@ country_event = {
 	trigger = {
 		has_country_modifier = inca_excavations
 		has_country_flag = temple_of_the_sun_begins
-                has_country_flag = temple_of_the_sun_upstairs
+		has_country_flag = temple_of_the_sun_upstairs
 		NOT = {
 			has_country_flag = temple_of_the_sun_noise
 		}
@@ -2352,7 +2326,7 @@ country_event = {
 
 	option = {
 		name = "What is that noise...?"
-                set_country_flag = temple_of_the_sun_noise
+		set_country_flag = temple_of_the_sun_noise
 	}
 }
 
@@ -2367,7 +2341,7 @@ country_event = {
 	trigger = {
 		has_country_modifier = inca_excavations
 		has_country_flag = temple_of_the_sun_noise
-                has_country_flag = temple_of_the_sun_upstairs
+		has_country_flag = temple_of_the_sun_upstairs
 		NOT = {
 			has_country_flag = temple_of_the_sun_corridor
 		}
@@ -2381,7 +2355,7 @@ country_event = {
 
 	option = {
 		name = "I've got a feeling of déjà vu!"
-                set_country_flag = temple_of_the_sun_corridor
+		set_country_flag = temple_of_the_sun_corridor
 		clr_country_flag = temple_of_the_sun_noise
 		clr_country_flag = temple_of_the_sun_upstairs
 	}
@@ -2411,29 +2385,29 @@ country_event = {
 
 	option = {
 		name = "Right."
-                set_country_flag = temple_of_the_sun_corridor_taken
-                set_country_flag = temple_of_the_sun_corridor_false
+		set_country_flag = temple_of_the_sun_corridor_taken
+		set_country_flag = temple_of_the_sun_corridor_false
 	}
 	option = {
 		name = "The middle way."
-                set_country_flag = temple_of_the_sun_corridor_taken
-                set_country_flag = temple_of_the_sun_corridor_false
+		set_country_flag = temple_of_the_sun_corridor_taken
+		set_country_flag = temple_of_the_sun_corridor_false
 	}
 	option = {
 		name = "Left."
-                set_country_flag = temple_of_the_sun_corridor_taken
-                set_country_flag = temple_of_the_sun_corridor_right
+		set_country_flag = temple_of_the_sun_corridor_taken
+		set_country_flag = temple_of_the_sun_corridor_right
 	}
 	option = {
 		name = "Upstairs."
-                set_country_flag = temple_of_the_sun_corridor_taken
-                set_country_flag = temple_of_the_sun_corridor_upstairs
+		set_country_flag = temple_of_the_sun_corridor_taken
+		set_country_flag = temple_of_the_sun_corridor_upstairs
 	}
 
 	option = {
 		name = "Downstairs."
-                set_country_flag = temple_of_the_sun_corridor_taken
-                set_country_flag = temple_of_the_sun_corridor_downstairs
+		set_country_flag = temple_of_the_sun_corridor_taken
+		set_country_flag = temple_of_the_sun_corridor_downstairs
 	}
 }
 
@@ -2447,7 +2421,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = inca_excavations
-                has_country_flag = temple_of_the_sun_corridor_false
+		has_country_flag = temple_of_the_sun_corridor_false
 	}
 
 
@@ -2459,9 +2433,9 @@ country_event = {
 	option = {
 		name = "We are doomed!"
 		remove_country_modifier = inca_excavations
-                clr_country_flag = temple_of_the_sun_corridor_false
+		clr_country_flag = temple_of_the_sun_corridor_false
 		clr_country_flag = temple_of_the_sun_corridor_taken
-                clr_country_flag = temple_of_the_sun_corridor
+		clr_country_flag = temple_of_the_sun_corridor
 		clr_country_flag = temple_of_the_sun_begins
 		clr_country_flag = temple_of_the_sun_sacrifice
 	}
@@ -2491,7 +2465,7 @@ country_event = {
 
 	option = {
 		name = "Who is that strange guy?"
-                set_country_flag = temple_of_the_sun_guy
+		set_country_flag = temple_of_the_sun_guy
 	}
 }
 
@@ -2519,11 +2493,11 @@ country_event = {
 
 	option = {
 		name = "We take the artefacts in the chamber behind him."
-                badboy = 0.5
-                country_event = 201067
-                set_country_flag = temple_of_the_sun_artefacts
-                set_country_flag = temple_of_the_sun_decision
-                set_global_flag = andean_gold_found
+		badboy = 0.5
+		country_event = 201067
+		set_country_flag = temple_of_the_sun_artefacts
+		set_country_flag = temple_of_the_sun_decision
+		set_global_flag = andean_gold_found
 		any_country = {
 			remove_country_modifier = inca_excavations
 		}
@@ -2531,11 +2505,11 @@ country_event = {
 	}
 	option = {
 		name = "We make this a restricted archaeological area."
-                badboy = 0.25
-                country_event = 201068
-                set_country_flag = temple_of_the_sun_artefacts
-                set_country_flag = temple_of_the_sun_area
-                set_global_flag = andean_gold_found
+		badboy = 0.25
+		country_event = 201068
+		set_country_flag = temple_of_the_sun_artefacts
+		set_country_flag = temple_of_the_sun_area
+		set_global_flag = andean_gold_found
 		any_country = {
 			remove_country_modifier = inca_excavations
 		}
@@ -2543,11 +2517,11 @@ country_event = {
 	}
 	option = {
 		name = "We have decided that this place belongs to you and your people."
-                country_event = 201069
-                badboy = -1
-                set_country_flag = temple_of_the_sun_artefacts
-                set_country_flag = temple_of_the_sun_people
-                set_global_flag = andean_gold_found
+		country_event = 201069
+		badboy = -1
+		set_country_flag = temple_of_the_sun_artefacts
+		set_country_flag = temple_of_the_sun_people
+		set_global_flag = andean_gold_found
 		any_country = {
 			remove_country_modifier = inca_excavations
 		}
@@ -2569,8 +2543,8 @@ country_event = {
 
 	option = {
 		name = "A great day for our country."
-                prestige = 33
-                money = 1000000
+		prestige = 33
+		money = 1000000
         }
 }
 
@@ -2606,7 +2580,7 @@ country_event = {
 
 	option = {
 		name = "A great day for humanity."
-                prestige = -1
+		prestige = -1
 		any_pop = {
 			militancy = -1
 		}

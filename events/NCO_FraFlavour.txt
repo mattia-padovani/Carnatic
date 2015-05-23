@@ -22,14 +22,12 @@ country_event = {
 
 		any_country = { 
 			limit = {
-				AND = {
-					OR = { 
-						tag = SPA
-						tag = AUS
-						tag = RUS
-					}
-					NOT = { war_with = FRA }
+				OR = { 
+					tag = SPA
+					tag = AUS
+					tag = RUS
 				}
+				NOT = { war_with = FRA }
 			}
 			country_event = 44601
 		}

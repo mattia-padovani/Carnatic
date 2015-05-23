@@ -382,14 +382,14 @@ country_event = {
 			secede_province = USA
 		}
 		
-		ai_will_do = { factor = 70 }
+		ai_chance = { factor = 70 }
 	}
 	
 	option = {
 		name = "We refuse"
 		USA = { country_event = 44410 }
 		
-		ai_will_do = { factor = 30 }
+		ai_chance = { factor = 30 }
 	}
 }
 	
@@ -433,6 +433,6 @@ country_event = {
 		USA_1 = { add_core = THIS } #Alaska
 		CAN_19 = { add_core = THIS } #NC
 		
-		ai_will_do = { factor = 100 }
+		ai_chance = { factor = 100 }
 	}
 }

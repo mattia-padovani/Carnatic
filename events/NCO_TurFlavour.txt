@@ -34,10 +34,8 @@ country_event = {
 		set_global_flag = balkans_declare_freedom
 		any_country = {
 			limit = {
-				AND = {
-					vassal_of = TUR
-					capital_scope = { continent = europe }
-				}
+				vassal_of = TUR
+				capital_scope = { continent = europe }
 			}
 			country_event = 44501
 		}

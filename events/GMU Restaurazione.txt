@@ -196,7 +196,7 @@ country_event = {
 		tag = SAR
                 government = prussian_constitutionalism
 		has_global_flag = hungarian_revolution_occurred	
-	        has_global_flag = five_days_of_milan_occurred
+		has_global_flag = five_days_of_milan_occurred
                 NOT = { has_country_flag = first_war_of_italian_independence_intervention }
                 NOT = { has_country_flag = first_war_of_italian_independence_refused }
                 NOT = { has_country_flag = first_war_of_italian_independence_lost }
@@ -456,31 +456,29 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                tag = AUS
-	        has_country_flag = liberal_revolution_in_progress
+		tag = AUS
+		has_country_flag = liberal_revolution_in_progress
 		NOT = {
 			has_country_flag = no_lombardo_venetian_independence
 		}
-		is_possible_vassal = LOM
-		is_possible_vassal = VEN
-                OR = {
-		        any_state = {
-			          any_owned_province = {
-				                     is_core = LOM
-				                     culture = north_italian
-				                     is_primary_culture = no
-			          }
-			          average_militancy = 5
-		        }
-		        any_state = {
-			          any_owned_province = {
-				  is_core = VEN
-				  culture = north_italian
-				  is_primary_culture = no
-			          }
-			          average_militancy = 5
-		        }
-                }
+		OR = {
+			any_state = {
+				any_owned_province = {
+					is_core = LOM
+					culture = north_italian
+					is_primary_culture = no
+				}
+				average_militancy = 5
+			}
+			any_state = {
+				any_owned_province = {
+					is_core = VEN
+					culture = north_italian
+					is_primary_culture = no
+				}
+				average_militancy = 5
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -594,90 +592,6 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		name = "Dissolve the Kingdom of Lombardy-Venetia."
-		badboy = -10
-		prestige = -50
-		release_vassal = LOM
-		release_vassal = VEN
-		LOM = {
-			country_event = 90023
-		}
-		VEN = {
-			country_event = 90023
-		}
-		any_pop = {
-			limit = { has_pop_culture = north_italian }
-			militancy = -3
-		}
-		any_pop = {
-			limit = {
-				NOT = { has_pop_culture = north_italian }
-				is_primary_culture = no
-			}
-			militancy = 1
-		}
-		relation = {
-			who = LOM
-			value = 50
-		}
-		diplomatic_influence = {
-			who = LOM
-			value = 200
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					government = proletarian_dictatorship
-					government = bourgeois_dictatorship
-					government = fascist_dictatorship
-					government = presidential_dictatorship
-				}
-			}
-			modifier = {
-				factor = 0.25
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-				}
-			}
-			modifier = {
-				factor = 1.5
-				government = democracy
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 0.75
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 1.25
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 0.5
-				is_greater_power = yes
-			}
-			modifier = {
-				factor = 1.2
-				militancy = 3
-			}
-			modifier = {
-				factor = 1.2
-				militancy = 5
-			}
-			
-		}
-	}
 }
 
 #Venetian insurrection
@@ -738,7 +652,7 @@ country_event = {
 			}
 		define_general = {
 				name = "Julius von Haynau"
-				personality = audacius
+				personality = audacious
 				background = war_college
 		}
 		ai_chance = {
@@ -963,7 +877,7 @@ country_event = {
 	option = {
 		name = "Mazzini is a threat to traditional order and should be arrested."
                 prestige = 2
-	        set_global_flag = sardinia_demands_mazzini
+		set_global_flag = sardinia_demands_mazzini
                 relation = {
                         who = SWI
                         value = -25
@@ -1024,7 +938,7 @@ country_event = {
 
 	trigger = {
                 tag = SWI
-	        has_global_flag = sardinia_demands_mazzini
+		has_global_flag = sardinia_demands_mazzini
 	}
 
 	mean_time_to_happen = {
@@ -1033,7 +947,7 @@ country_event = {
 
 	option = {
 		name = "Mazzini is our guest. No one has the right to blackmail our proud country!"
-	        set_global_flag = mazzini_in_exile
+		set_global_flag = mazzini_in_exile
                 prestige = 5
                 badboy = 1
                 relation = {
@@ -1060,7 +974,7 @@ country_event = {
         }
 	option = {
 		name = "Pretend that we arrest him, but let Mazzini time to escape."
-	        set_global_flag = mazzini_escaped
+		set_global_flag = mazzini_escaped
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1071,7 +985,7 @@ country_event = {
         }   
 	option = {
 		name = "Very well, arrest and extradite him."
-	        set_global_flag = mazzini_arrested
+		set_global_flag = mazzini_arrested
                 prestige = -2
                 badboy = -1
                 relation = {
@@ -1109,7 +1023,7 @@ country_event = {
 
 	trigger = {
                 tag = ENG
-	        has_global_flag = mazzini_escaped
+		has_global_flag = mazzini_escaped
 	}
 
 	mean_time_to_happen = {
@@ -1118,7 +1032,7 @@ country_event = {
 
 	option = {
 		name = "Welcome Mazzini. Tea, anyone?"
-	        set_global_flag = mazzini_in_exile
+		set_global_flag = mazzini_in_exile
                 prestige = 5
                 relation = {
                         who = SAR
@@ -1156,7 +1070,7 @@ country_event = {
         }
 	option = {
 		name = "We have enough troublemakers in our glorious nation."
-	        set_global_flag = mazzini_arrested
+		set_global_flag = mazzini_arrested
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -1187,7 +1101,7 @@ country_event = {
 
 	trigger = {
                 tag = SAR
-	        has_global_flag = mazzini_arrested
+		has_global_flag = mazzini_arrested
 	}
 
 	mean_time_to_happen = {
@@ -1227,7 +1141,7 @@ country_event = {
 
 	trigger = {
                 tag = SAR
-	        has_global_flag = mazzini_in_exile
+		has_global_flag = mazzini_in_exile
 	}
 
 	mean_time_to_happen = {
@@ -1293,7 +1207,7 @@ country_event = {
 
 	option = {
 		name = "It is time for reforms."
-	        set_global_flag = pius_IX_reforms
+		set_global_flag = pius_IX_reforms
                 prestige = 5
 		any_pop = {
 			ideology = {
@@ -1357,7 +1271,7 @@ country_event = {
                 war = no
                 tag = PAP
                 FRA = { is_sphere_leader_of = PAP }
-	        has_global_flag = pius_IX_reforms
+		has_global_flag = pius_IX_reforms
                 SAR = { has_country_flag = first_war_of_italian_independence_intervention }
                 SAR = { war_with = AUS }
                 NOT = { government = democracy }
@@ -1365,8 +1279,8 @@ country_event = {
                 NOT = { alliance_with = SAR }
 		 OR = {
 			has_country_modifier = springtime_of_nations
-	                has_country_flag = liberal_revolution_in_progress
-	            }
+		        has_country_flag = liberal_revolution_in_progress
+		    }
 	}
 
 	mean_time_to_happen = {
@@ -1381,7 +1295,7 @@ country_event = {
 		name = "Long live the Roman Republic!"
 		FRA = { country_event = 202016 }
                 prestige = 5
-	        government = democracy
+		government = democracy
                 political_reform = universal_voting
                 political_reform = free_press
                 political_reform = population_equal_weight
@@ -1576,16 +1490,16 @@ country_event = {
 			exists = yes
 			truce_with = THIS
 			NOT = { has_country_flag = austria_let_milan_go }
-		        }
+			}
 
                         KUK = {
 			exists = yes
 			truce_with = THIS
 			NOT = { has_country_flag = austria_let_milan_go }
-		        }
+			}
                 }
 		has_global_flag = venetian_insurrection_occurred
-	        has_global_flag = five_days_of_milan_occurred
+		has_global_flag = five_days_of_milan_occurred
                 has_country_flag = first_war_of_italian_independence_intervention
                 owns = 726
                 owns = 727
@@ -1598,7 +1512,7 @@ country_event = {
 
 	option = {
 		name = "We have shown the world the heroism of the Italian people!"
-	        set_global_flag = first_war_of_italian_independence_won
+		set_global_flag = first_war_of_italian_independence_won
 		prestige = 25
                 726 = { add_core = THIS }
                 727 = { add_core = THIS }
@@ -1626,7 +1540,7 @@ country_event = {
                         tag = AUS
 		 }
 		has_global_flag = venetian_insurrection_occurred
-	        has_global_flag = five_days_of_milan_occurred
+		has_global_flag = five_days_of_milan_occurred
                 SAR = { has_country_flag = first_war_of_italian_independence_intervention }
                 truce_with = SAR
                 owns = 727
@@ -1641,7 +1555,7 @@ country_event = {
 	option = {
 		name = "Claim Milan!"
 		SAR = { country_event = 202021 }
-	        set_global_flag = first_war_of_italian_independence_lost
+		set_global_flag = first_war_of_italian_independence_lost
         }
 }
 
@@ -1752,8 +1666,8 @@ country_event = {
 		tag = SAR
 		war = no
 		has_global_flag = venetian_insurrection_occurred
-	        has_global_flag = five_days_of_milan_occurred
-	        has_global_flag = first_war_of_italian_independence_lost
+		has_global_flag = five_days_of_milan_occurred
+		has_global_flag = first_war_of_italian_independence_lost
                 has_country_flag = first_war_of_italian_independence_intervention
 	}
 
@@ -1775,8 +1689,8 @@ country_event = {
 				}
 			}
                 upper_house = {
-	                    ideology = liberal
-	                    value = 0.20
+		            ideology = liberal
+		            value = 0.20
                 } 
 		rich_strata = {
 			ideology = {
@@ -1813,7 +1727,7 @@ country_event = {
                         tag = AUS
 		 }
 		has_global_flag = venetian_insurrection_occurred
-	        has_global_flag = five_days_of_milan_occurred
+		has_global_flag = five_days_of_milan_occurred
                 SAR = { has_country_flag = first_war_of_italian_independence_intervention }
                 owns = 727
                 owns = 728

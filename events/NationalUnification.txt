@@ -251,10 +251,8 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.6
-				AND = { 
-					tag = VEN
-					is_secondary_power = yes
-				}
+				tag = VEN
+				is_secondary_power = yes
 			}
 			modifier = {
 				factor = 1.5
