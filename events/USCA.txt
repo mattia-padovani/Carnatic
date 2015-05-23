@@ -11,7 +11,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = { tag = UCA }
+	trigger = { tag = MEX }
 	
 	mean_time_to_happen = { days = 1 }
 	
@@ -53,7 +53,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		owns = 2201
 		NOT = {
@@ -66,7 +69,7 @@ country_event = {
 				province_id = 2201
 				controlled_by_rebels = yes
 				province_control_days = 60
-				NOT = { country_units_in_province = UCA }
+				NOT = { country_units_in_province = THIS }
 			}
 		}
 	}
@@ -89,7 +92,7 @@ country_event = {
 		}
 		COS = {
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -106,7 +109,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		owns = 2197
 		NOT = {
@@ -119,7 +125,7 @@ country_event = {
 				province_id = 2197
 				controlled_by_rebels = yes
 				province_control_days = 60
-				NOT = { country_units_in_province = UCA }
+				NOT = { country_units_in_province = THIS }
 			}
 		}
 	}
@@ -142,7 +148,7 @@ country_event = {
 		}
 		HON = {
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -159,7 +165,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		owns = 2193
 		NOT = {
@@ -170,7 +179,7 @@ country_event = {
 			province_id = 2193
 			controlled_by_rebels = yes
 			province_control_days = 60
-			NOT = { country_units_in_province = UCA }
+			NOT = { country_units_in_province = THIS }
 		}
 	}
 	
@@ -192,7 +201,7 @@ country_event = {
 		}
 		HON = {
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -209,16 +218,19 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		2191 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2192 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
@@ -232,8 +244,8 @@ country_event = {
 	option = {
 		name = "EVT97556OPTA"
 		prestige = 2
-		2191 = { add_core = UCA }
-		2192 = { add_core = UCA }
+		2191 = { add_core = THIS }
+		2192 = { add_core = THIS }
 	}
 }
 
@@ -246,28 +258,31 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		2193 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2194 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2195 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2196 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
@@ -281,10 +296,10 @@ country_event = {
 	option = {
 		name = "EVT97556OPTA"
 		prestige = 5
-		2193 = { add_core = UCA }
-		2194 = { add_core = UCA }
-		2195 = { add_core = UCA }
-		2196 = { add_core = UCA }
+		2193 = { add_core = THIS }
+		2194 = { add_core = THIS }
+		2195 = { add_core = THIS }
+		2196 = { add_core = THIS }
 	}
 }
 
@@ -297,28 +312,31 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		2197 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2198 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2199 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2200 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
@@ -332,10 +350,10 @@ country_event = {
 	option = {
 		name = "EVT97556OPTA"
 		prestige = 5
-		2197 = { add_core = UCA }
-		2198 = { add_core = UCA }
-		2199 = { add_core = UCA }
-		2200 = { add_core = UCA }
+		2197 = { add_core = THIS }
+		2198 = { add_core = THIS }
+		2199 = { add_core = THIS }
+		2200 = { add_core = THIS }
 	}
 }
 
@@ -348,22 +366,25 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		war = no
 		2201 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2202 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
 		}
 		2203 = {
-			NOT = { is_core = UCA }
+			NOT = { is_core = THIS }
 			owned_by = THIS
 			controlled_by = THIS
 			NOT = { average_militancy = 2 }
@@ -377,9 +398,9 @@ country_event = {
 	option = {
 		name = "EVT97556OPTA"
 		prestige = 2
-		2201 = { add_core = UCA }
-		2202 = { add_core = UCA }
-		2203 = { add_core = UCA }
+		2201 = { add_core = THIS }
+		2202 = { add_core = THIS }
+		2203 = { add_core = THIS }
 	}
 }
 
@@ -392,7 +413,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		exists = ELS
 		any_owned_province = {
 			OR = {
@@ -427,9 +451,9 @@ country_event = {
 		prestige = 2
 		relation = { who = ELS value = -50 }
 		ELS = {
-			all_core = { add_core = UCA }
+			all_core = { add_core = THIS }
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -487,7 +511,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		exists = HON
 		any_owned_province = {
 			OR = {
@@ -522,9 +549,9 @@ country_event = {
 		prestige = 2
 		relation = { who = HON value = -50 }
 		HON = {
-			all_core = { add_core = UCA }
+			all_core = { add_core = THIS }
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -582,7 +609,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		NOT = { has_country_flag = nicaragua_independence }
 		exists = NIC
 		any_owned_province = {
@@ -618,9 +648,9 @@ country_event = {
 		prestige = 2
 		relation = { who = NIC value = -50 }
 		NIC = {
-			all_core = { add_core = UCA }
+			all_core = { add_core = THIS }
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -678,7 +708,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		NOT = { has_country_flag = costa_rica_independence }
 		exists = COS
 		any_owned_province = {
@@ -714,9 +747,9 @@ country_event = {
 		prestige = 2
 		relation = { who = COS value = -50 }
 		COS = {
-			all_core = { add_core = UCA }
+			all_core = { add_core = THIS }
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 12
 			}
@@ -877,7 +910,7 @@ country_event = {
 					tag = HON
 				}
 			}
-			all_core = { add_core = UCA }
+			all_core = { add_core = THIS }
 			add_country_modifier = {
 				name = small_country_draft
 				duration = 1095
@@ -968,7 +1001,7 @@ country_event = {
 			}
 			owner = { release = YUC }
 		}
-		all_core = { remove_core = UCA }
+		all_core = { remove_core = THIS }
 		change_tag = GUA
 		relation = { who = ELS value = 50 }
 		relation = { who = HON value = 50 }
@@ -994,7 +1027,10 @@ country_event = {
 	desc = "EVTDESC975600"
 	
 	trigger = {
-		tag = UCA
+		OR = {
+			tag = UCA
+			tag = MEX
+		}
 		ai = yes
 		OR = {
 			war_with = ELS
@@ -1010,7 +1046,7 @@ country_event = {
 				ELS = {
 					NOT = {
 						any_owned_province = { controlled_by = THIS }
-						any_owned_province = { country_units_in_province = UCA }
+						any_owned_province = { country_units_in_province = THIS }
 					}
 				}
 			}
@@ -1019,7 +1055,7 @@ country_event = {
 				HON = {
 					NOT = {
 						any_owned_province = { controlled_by = THIS }
-						any_owned_province = { country_units_in_province = UCA }
+						any_owned_province = { country_units_in_province = THIS }
 					}
 				}
 			}
@@ -1028,7 +1064,7 @@ country_event = {
 				NIC = {
 					NOT = {
 						any_owned_province = { controlled_by = THIS }
-						any_owned_province = { country_units_in_province = UCA }
+						any_owned_province = { country_units_in_province = THIS }
 					}
 				}
 			}
@@ -1037,7 +1073,7 @@ country_event = {
 				COS = {
 					NOT = {
 						any_owned_province = { controlled_by = THIS }
-						any_owned_province = { country_units_in_province = UCA }
+						any_owned_province = { country_units_in_province = THIS }
 					}
 				}
 			}
@@ -1062,7 +1098,7 @@ country_event = {
 				war_with = THIS
 				NOT = {
 					any_owned_province = { controlled_by = THIS }
-					any_owned_province = { country_units_in_province = UCA }
+					any_owned_province = { country_units_in_province = THIS }
 				}
 			}
 			end_war = THIS
@@ -1090,7 +1126,7 @@ country_event = {
 		name = "EVT16401OPTA"
 		prestige = 5
 		FROM = {
-			all_core = { add_core = UCA }
+			all_core = { add_core = THIS }
 		}
 		random_owned = {
 			limit = {
@@ -1137,7 +1173,7 @@ country_event = {
 
 	option = {
 		name = "EVT32550OPTB"
-		UCA = { country_event = 32552 }
+		THIS = { country_event = 32552 }
 		ai_chance = {
 			factor = 25
 		}

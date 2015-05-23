@@ -1,6 +1,7 @@
 owner = TUS
 controller = TUS
 add_core = TUS
+add_core = PAP
 add_core = RMG
 add_core = ITA
 trade_goods = timber
