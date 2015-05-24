@@ -87,6 +87,9 @@ political_decisions = {
 		potential = {
 			tag = RUS
 			NOT = { has_country_flag = claim_ukraine_n_belarus }
+			has_country_flag = russification_of_the_baltic_states
+			has_global_flag = plc_support_ubd
+			exists = PLC
 		}
 
 		allow = {
@@ -104,13 +107,17 @@ political_decisions = {
 				}
 				consciousness = 1
 			}
-			badboy = 10
+			badboy = 13
 			prestige = 10
 			set_country_flag = claim_ukraine_n_belarus
 			BYE = { all_core = { add_core = RUS } }
 			RUS_955 = { add_core = RUS }
 			RUS_958 = { add_core = RUS }
 			RUS_360 = { add_core = RUS }
+			relation = { who = PLC value = -200 }
+			diplomatic_influence = { who = PLC value = -200 }
+			leave_alliance = PLC
+			PLC = { country_event = 44705 }
 		}
 		ai_will_do = {
 			factor = 1

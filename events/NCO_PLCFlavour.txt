@@ -199,7 +199,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	effect = {
+	option = {
 		name = "Pass the reform"
 		prestige = 10
 		add_accepted_culture = ashkenazi
@@ -234,7 +234,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	effect = {
+	option = {
 		name = "Pass the reform"
 		prestige = 10
 		add_accepted_culture = byelorussian
@@ -249,5 +249,152 @@ country_event = {
 			} 
 			consciousness = 2
 		}
+	}
+}
+
+country_event = {
+	id = 44703
+	title = "Free the Baltics?"
+	desc = "The United Baltic Duchy has been annexed by Russia we should send supplies to the local population to help them break free."
+	picture = "polish_uprising_aus" #autocracy
+	
+	trigger = {
+		tag = PLC
+		RUS = { has_country_flag = russification_of_the_baltic_states }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}	
+	fire_only_once = yes
+
+	option = {
+		name = "Help them!"
+		prestige = 5
+		RUS = { 
+			country_event = 44704
+		}
+	}
+}
+
+country_event = {
+	id = 44704
+	title = "The Poles Incite unrest"
+	desc = "The Poles have begun sending supplies to help the Latvians and Estonians fight our rule."
+	picture = "polish_uprising_aus" #autocracy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "!"
+		set_global_flag = plc_support_ubd
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = LAT
+					is_core = EST
+				}
+			}
+			add_province_modifier = {
+				name = peasant_revolt
+				duration = 1460
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 44705
+	title = "The Russians Demand our Lands"
+	desc = "EVTDESC44705"
+	picture = "autocracy" #autocracy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We refuse!"
+		prestige = 5
+		LAT = { all_core = { add_core = PLC } }
+		EST = { all_core = { add_core = PLC } }
+		RUS = { country_event = 44706 }
+	}
+}
+
+country_event = {
+	id = 44706
+	title = "The Poles Refuse"
+	desc = "The Poles have refused to free the Ukrainians and Belarusians."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will free them by force"
+		PLC = {
+			casus_belli = {
+				target = RUS
+				type = humiliate
+				months = 12
+			}
+		}
+		casus_belli = {
+			target = PLC
+			type = humiliate
+			months = 12
+		}
+		war = {
+			target = PLC
+			attacker_goal = {
+				casus_belli = humiliate
+			}
+			call_ally = yes
+		}
+	}
+}
+
+country_event = {
+	id = 44707
+	title = "The Baltic is ours"
+	desc = "The Latvians and Estonians welcome us as liberators."
+
+	trigger = {
+		tag = PLC
+		has_global_flag = plc_support_ubd 
+		EST = { all_core = { owned_by = PLC } }
+		LAT = { all_core = { owned_by = PLC } }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}	
+	fire_only_once = yes
+	
+	option = {
+		name = "We will embrace them"
+		add_accepted_culture = latvian
+		add_accepted_culture = estonian
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = LAT
+					is_core = EST
+				}
+			}
+			remove_province_modifier = {
+				name = peasant_revolt
+			}
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					culture = estonian
+					culture = latvian
+				}
+			}
+			militancy = -3
+		}
+		BYE = { all_core = { remove_core = RUS } }
+		RUS_955 = { remove_core = RUS }
+		RUS_958 = { remove_core = RUS }
+		RUS_360 = { remove_core = RUS }
 	}
 }
