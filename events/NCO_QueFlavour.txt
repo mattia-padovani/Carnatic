@@ -436,3 +436,33 @@ country_event = {
 		ai_chance = { factor = 100 }
 	}
 }
+
+country_event = {
+	id = 44412
+	title = "We have won!"
+	desc = "We have beaten Louisiana and forced them to accept our rule over them."
+	
+	trigger = {
+		tag = USA
+		has_global_flag = lou_american_war
+		NOT = { exists = LOU }
+		NOT = { has_global_flag = lou_american_war_lost }
+		ai = yes
+		OR = {	
+			government = absolute_monarchy
+			government = prussian_constitutionalism 
+			government = hms_government
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	option = {
+		name = "For the empire!"
+		treasury = 110000
+		prestige = 5
+	}
+	
+}

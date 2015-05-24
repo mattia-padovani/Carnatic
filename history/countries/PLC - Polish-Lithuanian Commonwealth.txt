@@ -1,4 +1,4 @@
-capital = 703 #Krakow
+capital = 706 #Warsaw
 primary_culture = polish
 culture = lithuanian
 religion = catholic
@@ -6,7 +6,7 @@ government = hms_government
 plurality = 15.0
 nationalvalue = nv_equality
 literacy = 0.2
-non_state_culture_literacy = 0.12
+non_state_culture_literacy = 0.16
 civilized = yes
 
 #GreaterPowers = prestige

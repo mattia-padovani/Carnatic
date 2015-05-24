@@ -1,0 +1,253 @@
+country_event = {
+	id = 44700
+	title = "Reforms in the Sejm"
+	desc = "During the late 1700s the Sejm began a process of reform, with a goal to be more egalitarian. Factions arose in the government halting progress. It is time to get rid of serfdom."
+	picture = "polish_uprising_aus" #autocracy
+	
+	trigger = {
+		tag = PLC
+		ideological_thought = 1
+		debt_law = serfdom
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}	
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVT60055557OPTA"
+		set_country_flag = serfdom_abolished_generic
+		political_reform = peonage
+		any_pop = {
+			limit = {
+			OR = {
+			pop_type = farmers
+			pop_type = labourers
+				}
+			}
+		money = 5
+		consciousness = 1
+		militancy = -2
+		}
+		any_pop = { limit = { type = aristocrats }
+			consciousness = 3
+			militancy = 2
+			money = -50
+			}
+		any_owned = { limit = {
+			OR = {
+				trade_goods = coal
+				trade_goods = iron
+				trade_goods = oil
+				trade_goods = precious_metal
+				trade_goods = sulphur
+				trade_goods = tropical_wood
+				trade_goods = timber
+				trade_goods = rubber
+				}
+			}
+		any_pop = { limit = { type = serfs } pop_type = labourers }
+		}
+		any_owned = { limit = {
+			OR = {
+				trade_goods = cattle
+				trade_goods = coffee
+				trade_goods = cotton
+				trade_goods = dye
+				trade_goods = fish
+				trade_goods = grain
+				trade_goods = opium
+				trade_goods = fruit
+				trade_goods = wool
+				trade_goods = silk
+				trade_goods = tea
+				trade_goods = tobacco
+					}
+			}
+		any_pop = { limit = { type = serfs } pop_type = farmers }
+			}
+		ai_chance = { factor = 80 }
+	}
+		
+	option = {
+		name = "EVT60055557OPTB"
+		set_country_flag = serfdom_abolished_generic
+		political_reform = peonage
+		any_pop = {
+			limit = {
+			OR = {
+			pop_type = farmers
+			pop_type = labourers
+			pop_type = serfs
+				}
+			}
+		consciousness = 3
+		militancy = 2
+		}
+		any_pop = { limit = { type = aristocrats }
+			consciousness = -1
+			militancy = -2
+				}
+		any_owned = { limit = {
+			OR = {
+				trade_goods = coal
+				trade_goods = iron
+				trade_goods = oil
+				trade_goods = precious_metal
+				trade_goods = sulphur
+				trade_goods = tropical_wood
+				trade_goods = timber
+				trade_goods = rubber
+				}
+			}
+		any_pop = { limit = { type = serfs } pop_type = labourers }
+		}
+		any_owned = { limit = {
+			OR = {
+				trade_goods = cattle
+				trade_goods = coffee
+				trade_goods = cotton
+				trade_goods = dye
+				trade_goods = fish
+				trade_goods = grain
+				trade_goods = opium
+				trade_goods = fruit
+				trade_goods = wool
+				trade_goods = silk
+				trade_goods = tea
+				trade_goods = tobacco
+					}
+			}
+		any_pop = { limit = { type = serfs } pop_type = farmers }
+			}
+		ai_chance = { factor = 20 }
+		}
+		
+	option = {
+		name = "EVT60055557OPTC"
+		set_country_flag = serfdom_abolished_generic
+		political_reform = peonage
+		any_pop = {
+			limit = {
+			OR = {
+			pop_type = farmers
+			pop_type = labourers
+			pop_type = serfs
+				}
+			}
+		money = 5
+		consciousness = 1
+		militancy = -2
+			}
+		any_pop = { limit = { type = aristocrats } money = 50 }
+		add_tax_relative_income = -0.75
+		any_owned = { limit = {
+			OR = {
+				trade_goods = coal
+				trade_goods = iron
+				trade_goods = oil
+				trade_goods = precious_metal
+				trade_goods = sulphur
+				trade_goods = tropical_wood
+				trade_goods = timber
+				trade_goods = rubber
+				}
+			}
+		any_pop = { limit = { type = serfs } pop_type = labourers }
+		}
+		any_owned = { limit = {
+			OR = {
+				trade_goods = cattle
+				trade_goods = coffee
+				trade_goods = cotton
+				trade_goods = dye
+				trade_goods = fish
+				trade_goods = grain
+				trade_goods = opium
+				trade_goods = fruit
+				trade_goods = wool
+				trade_goods = silk
+				trade_goods = tea
+				trade_goods = tobacco
+					}
+			}
+		any_pop = { limit = { type = serfs } pop_type = farmers }
+			}
+		ai_chance = { factor = 0 }
+		}
+}
+
+country_event = {
+	id = 44701
+	title = "Reforms in the Sejm"
+	desc = "Reforms continue in the Sejm. There has always been a large jewish community living in the commonwealth. It is time to offer them equal rights in the government."
+	picture = "polish_uprising_aus" #autocracy
+	
+	trigger = {
+		tag = PLC
+		state_n_government = 1
+		NOT = { debt_law = serfdom }
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	fire_only_once = yes
+	
+	effect = {
+		name = "Pass the reform"
+		prestige = 10
+		add_accepted_culture = ashkenazi
+		any_pop = { 
+			limit = { 
+				OR = {
+					culture = polish
+					culture = lithuanian
+				}
+			} 
+			consciousness = 2
+		}
+	}
+}
+
+country_event = {
+	id = 44702
+	title = "Reforms in the Sejm"
+	desc = "Reforms continue in the Sejm. There has always been a large Belarusian and Ukrainian community living in the commonwealth. It is time to offer them equal rights in the government."
+	picture = "polish_uprising_aus" #autocracy
+	
+	trigger = {
+		tag = PLC
+		nationalism_n_imperialism = 1
+		NOT = { debt_law = serfdom }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}	
+	
+	fire_only_once = yes
+	
+	effect = {
+		name = "Pass the reform"
+		prestige = 10
+		add_accepted_culture = byelorussian
+		add_accepted_culture = ukrainian
+		any_pop = { 
+			limit = { 
+				OR = {
+					culture = polish
+					culture = lithuanian
+					culture = ashkenazi
+				}
+			} 
+			consciousness = 2
+		}
+	}
+}
