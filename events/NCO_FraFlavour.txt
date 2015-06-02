@@ -237,11 +237,143 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = "Wahoo!"
+		name = "Hurrah!"
 		set_country_flag = won_franco_british_war
 		prestige = 30
 		
 	}
 }
+
+country_event = {
+	id = 44605
+	title = "Exert influence on the Germans"
+	desc = "We created the confederation a long time ago and now they have begun to wander. Time to bring them back in control."
+	trigger = {
+		tag = FRA
+		exists = CRH
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "About time"
+		create_vassal = CRH
+		diplomatic_influence = {
+			who = CRH
+			value = 300
+		}
+		create_alliance = CRH
+		leadership = 60
+		CRH = { 
+			leadership = 40 
+			small_arms = 30
+			ammunition = 30
+			liquor = 30
+		}
+	}
+}
+
+country_event = {
+	id = 44606
+	title = "The French must be stopped"
+	desc = "The French have beaten us at every turn. We must look for allies and take care of this menace."
+	trigger = {
+		tag = AUS
+		exists = CRH
+	}
+	mean_time_to_happen = {
+		days = 50
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "It's our time"
+		set_country_flag = preparing_to_fight_napoleon
+		any_country = {
+			limit = {
+				OR = { 
+					tag = RUS
+					tag = PRU
+					tag = NET
+					tag = NGF
+				}
+			}
+			country_event = 44607
+		}
+		leadership = 40
+	}
+}
+
+country_event = {
+	id = 44607
+	title = "The French must be stopped"
+	desc = "The French have amassed a massive empire and look to try to conquer all of Europe. Austria asks that we help in dismantling them."
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We must agree."
+		leadership = 40
+		relation = {
+			who = FROM
+			value = 200
+		}
+		create_alliance = FROM
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "We have more pressing matters"
+		prestige_factor = -0.9
+		any_pop = {
+			consciousness = 3
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 44608
+	title = "We are ready!"
+	desc = "The French will be stopped and the empire will be reinstated."
+	trigger = {
+		tag = AUS
+		has_country_flag = preparing_to_fight_napoleon
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "It's our time"
+		casus_belli ={
+			target = FRA
+			type = release_puppet
+			months = 12
+		}
+		war = {
+			target = FRA
+			attacker_goal = {
+				casus_belli = release_puppet
+				country = CRH
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally = yes
+		}
+	}
+}
+
 
 

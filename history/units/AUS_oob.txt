@@ -9,43 +9,43 @@ TIR = {
 
 GEN = {
 	value = 225
-	level = 5
+	level = 3
 	influence_value = 0
 	military_access = yes
 }
 
-LOM = {
+SER = {
 	value = 225
-	level = 5
+	level = 4
 	influence_value = 0
 	military_access = yes
 }
 
 MOL = {
 	value = 125
-	level = 3
+	level = 4
 	influence_value = 0
 }
 WAL = {
 	value = 125
-	level = 3
+	level = 4
 	influence_value = 0
 }
 
 #German Minors
 BAD = {	
 	value = 125
-	level = 5
+	level = 4
 	influence_value = 0
 }
 BAV = {
 	value = 125
-	level = 5
+	level = 4
 	influence_value = 0
 }
 WUR = {
 	value = 125
-	level = 5
+	level = 4
 	influence_value = 0
 }
 SAX = {
@@ -146,22 +146,27 @@ SWI = {
 }
 PAR = {
 	value = 100
-	level = 5
+	level = 4
 }
 MOD = {
 	value = 100
-	level = 5
+	level = 4
 	influence_value = 0
 }
 TUS = {
 	value = 75
-	level = 5
+	level = 4
 	influence_value = 0
 }
 LUC = {
 	value = 75
-	level = 5
+	level = 4
 	influence_value = 0
+}
+PAP = {
+	value = 125		#relation
+	level = 4		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 25
 }
 DEN = {
 	value = 55

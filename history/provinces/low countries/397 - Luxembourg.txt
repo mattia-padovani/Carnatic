@@ -1,5 +1,5 @@
-owner = BEL
-controller = BEL
+owner = FRA
+controller = FRA
 add_core = LUX
 add_core = NET
 trade_goods = iron

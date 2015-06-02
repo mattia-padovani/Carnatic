@@ -1,5 +1,5 @@
-owner = BEL
-controller = BEL
+owner = FRA
+controller = FRA
 add_core = NET
 add_core = BEL
 trade_goods = coal

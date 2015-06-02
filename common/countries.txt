@@ -4,6 +4,7 @@
 REB 	= 	"countries/rebels.txt"
 
 ## NCO ##
+CRH = "countries/Confederation of the Rhine.txt"
 GEN	= "countries/Genoa.txt"
 HRE = "countries/Holy Roman Empire.txt"
 IBR = "countries/Iberia.txt"

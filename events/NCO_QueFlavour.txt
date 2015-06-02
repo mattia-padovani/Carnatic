@@ -359,6 +359,11 @@ country_event = {
 	
 	option = {
 		name = "No, thanks"
+		war_exhaustion = -20
+		years_of_research = 0.1
+		any_pop = {
+			militancy = -6
+		}
 	}
 }
 

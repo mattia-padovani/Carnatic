@@ -404,7 +404,7 @@ political_decisions = {
 			839 = { add_core = VEN }
 			834 = { add_core = VEN }
 			805 = { add_core = VEN }
-			734 = { add_core = VEN }
+			735 = { add_core = VEN }
 			
 			badboy = 6
 		}

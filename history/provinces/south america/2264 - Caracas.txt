@@ -2,5 +2,6 @@ owner = GCO
 controller = GCO
 add_core = GCO
 add_core = VNZ
+naval_base = 1
 trade_goods = fruit
 life_rating = 30

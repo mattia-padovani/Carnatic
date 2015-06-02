@@ -7,10 +7,11 @@ government = democracy
 plurality = 50
 nationalvalue = nv_productivity
 literacy = 0.6
+non_state_culture_literacy = 0.35
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 12
+prestige = 15
 
 # Political reforms
 slavery = no_slavery

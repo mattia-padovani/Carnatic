@@ -1,5 +1,6 @@
-owner = COB
-controller = COB
+owner = CRH
+controller = CRH
+add_core = CRH
 add_core = COB
 add_core = GER
 trade_goods = iron

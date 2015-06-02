@@ -1,5 +1,6 @@
-owner = MUN
-controller = MUN
+owner = CRH
+controller = CRH
+add_core = CRH
 add_core = MUN
 add_core = WES
 add_core = GER

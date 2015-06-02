@@ -122,32 +122,25 @@ alliance = {
 		start_date =  1835.1.1
 		end_date = 1867.1.1
 	}
-#Austria/Sphereling
+#France/Sphereling
 alliance = {
-		first = AUS 
+		first = FRA 
 		second = MOD 
 		start_date =  1835.1.1
 		end_date = 1867.1.1
 	}
 alliance = {
-		first = AUS 
+		first = FRA 
 		second = PAR 
 		start_date =  1835.1.1
 		end_date = 1867.1.1
 	}
 alliance = {
-		first = AUS 
+		first = FRA 
 		second = TUS 
 		start_date =  1835.1.1
 		end_date = 1867.1.1
 	}
-#Russia/Montenegro
-alliance = {
-	first = RUS
-	second = MON
-	start_date = 1835.1.1
-	end_date = 1911.1.1
-}
 
 #Russia/Transcaucasia
 alliance = {
@@ -155,13 +148,6 @@ alliance = {
 	second = TCA
 	start_date = 1835.1.1
 	end_date = 1881.1.1
-}
-#France/Papal States
-alliance = {
-	first = FRA
-	second = PAP
-	start_date = 1835.1.1
-	end_date = 1861.1.1
 }
 #China/Lanfang
 alliance = {

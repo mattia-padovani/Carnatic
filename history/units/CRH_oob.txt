@@ -1,0 +1,125 @@
+army = {
+	name = "I. Korps"
+	location = 599
+	regiment = {
+		name= "1. Kgl. Bayer. Infanteriebrigade"
+		type = infantry
+		home = 599
+	}
+
+	regiment = {
+		name= "2. Kgl. Bayer. Infanteriebrigade"
+		type = infantry
+		home = 592
+	}
+
+	regiment = {
+		name= "3. Kgl. Bayer. Infanteriebrigade"
+		type = infantry
+		home = 602
+	}
+
+	regiment = {
+		name= "4. Kgl. Bayer. Infanteriebrigade"
+		type = artillery
+		home = 601
+	}
+
+}
+
+army = {
+	name = "II. Korps"
+	location = 595
+	regiment = {
+		name= "1. Linieninfanteriebrigade"
+		type = infantry
+		home = 562
+	}
+	regiment = {
+		name= "2. Linieninfanteriebrigade"
+		type = infantry
+		home = 563
+	}
+	regiment = {
+		name= "1. Großherzogliche Infanterie"
+		type = infantry
+		home = 2560
+	}
+	regiment = {
+		name= "5. Kgl. Bayer. Infanteriebrigade"
+		type = dragoon
+		home = 595
+	}
+
+	regiment = {
+		name= "6. Kgl. Bayer. Infanteriebrigade"
+		type = artillery
+		home = 595
+	}
+
+	regiment = {
+		name= "7. Kgl. Bayer. Infanteriebrigade"
+		type = artillery
+		home = 597
+	}
+
+}
+
+army = {
+	name = "III. Korps"
+	location = 571
+	regiment = {
+		name = "1. Reiter-Regiment König Karl" #Anachronistic by 30 years
+		type = cavalry
+		home = 589
+	}
+	regiment = {
+		name = "1. Infanterie-Regiment Königin Olga" #Anachronistic by 30 years
+		type = infantry
+		home = 589
+	}
+	regiment = {
+		name = "3. Infanterie-Regiment Königin Olga" #Anachronistic by 30 years
+		type = infantry
+		home = 589
+	}
+	regiment = {
+		name = "2. Infanterie-Regiment"
+		type = infantry
+		home = 589
+	}
+	regiment = {
+		name = "8. Kgl. Bayer. Infanteriebrigade"
+		type = artillery
+		home = 571
+	}
+}
+
+army = {
+	name = "Badische Armee"
+	location = 586
+	
+	regiment = {
+		name = "1. Badische Infanterie-Brigade"
+		type = infantry
+		home = 586
+	}
+	
+	regiment = {
+		name = "2. Badische Infanterie-Brigade"
+		type = infantry
+		home = 587
+	}
+	regiment = {
+		name = "7. Infanterie-Regiment"
+		type = infantry
+		home = 593
+	}
+	regiment = {
+		name = "1. Bataillon FußArtillerie"
+		type = artillery
+		home = 593
+	}
+}
+
+

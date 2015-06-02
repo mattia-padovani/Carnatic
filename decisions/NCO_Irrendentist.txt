@@ -25,7 +25,7 @@ political_decisions = {
 				}
 				consciousness = 1
 			}
-			badboy = 6
+			badboy = 3
 			prestige = 10
 			set_country_flag = claim_guyana
 			ENG_1979 = { add_core = GCO }
@@ -66,7 +66,7 @@ political_decisions = {
 				}
 				consciousness = 1
 			}
-			badboy = 9
+			badboy = 6
 			prestige = 20
 			set_country_flag = claim_amazon
 			2407 = { add_core = GCO }

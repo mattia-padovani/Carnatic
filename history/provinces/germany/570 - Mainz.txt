@@ -1,5 +1,6 @@
-owner = HES
-controller = HES
+owner = FRA
+controller = FRA
+add_core = CRH
 add_core = HES
 add_core = GER
 trade_goods = sulphur

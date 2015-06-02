@@ -1,5 +1,6 @@
-owner = KOL
-controller = KOL
+owner = CRH
+controller = CRH
+add_core = CRH
 add_core = KOL
 add_core = RHI
 add_core = GER
