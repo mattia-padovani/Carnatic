@@ -316,12 +316,13 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "We must agree."
+		name = "We agree."
 		leadership = 40
 		relation = {
 			who = FROM
 			value = 200
 		}
+		set_country_flag = preparing_to_fight_napoleon
 		create_alliance = FROM
 		ai_chance = {
 			factor = 100
@@ -347,9 +348,10 @@ country_event = {
 	trigger = {
 		tag = AUS
 		has_country_flag = preparing_to_fight_napoleon
+		CRH = { is_vassal = yes }
 	}
 	mean_time_to_happen = {
-		months = 6
+		months = 4
 	}
 	
 	fire_only_once = yes
@@ -375,5 +377,190 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 44609
+	title = "The French surrender"
+	desc = "With the French defeated we will begin carrying out the terms signed in the treaty of Vienna."
+	trigger = {
+		tag = AUS
+		CRH = { is_vassal = no }
+		NOT = { has_global_flag = napoleonic_wars_ended }
+		has_country_flag = preparing_to_fight_napoleon
+		NOT = { war_with = FRA }
+		truce = FRA
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = "We are victorious"
+		prestige = 10
+		
+		set_global_flag = napoleonic_wars_ended
+		FRA = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = ALS
+						is_core = BAV
+					}
+				}
+				secede_province = AUS
+				add_core = AUS
+				remove_core = CRH
+			}
+			573 = { 
+				secede_province = AUS 
+				add_core = AUS
+				remove_core = CRH
+			}
+			570 = { 
+				secede_province = AUS 
+				add_core = AUS
+				remove_core = CRH
+			}
+		}
+		any_pop = {
+			militancy = -1
+		}
+		war_exhaustion = -50
+		
+		CRH = { 
+			release = BAV
+			release = BAD
+			release = WUR
+		}
+		
+		create_alliance = BAV
+		diplomatic_influence = {
+			who = BAV
+			value = 300
+		}
+		create_alliance = WUR
+		diplomatic_influence = {
+			who = WUR
+			value = 300
+		}
+		create_alliance = BAD
+		diplomatic_influence = {
+			who = BAD
+			value = 300
+		}
+		any_country = {
+			limit = {
+				
+				has_country_flag = preparing_to_fight_napoleon
+				OR = {
+					tag = PRU
+					tag = NGF
+				}
+			}
+			country_event = 44610
+		}
+		any_country = {
+			limit = {
+				has_country_flag = preparing_to_fight_napoleon
+				tag = NET
+			}
+			country_event = 44611
+		}
+		any_country = {
+			limit = {
+				has_country_flag = preparing_to_fight_napoleon
+				tag = RUS
+			}
+			country_event = 44612
+		}
+	}
+}
 
+country_event = {
+	id = 44610
+	title = "The French surrender" #PRUSSIA
+	desc = "With the French defeated we will begin carrying out the terms signed in the treaty of Vienna."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are victorious"
+		prestige = 10
+		
+		FRA = {
+			any_owned = {
+				limit = {
+					is_core = CRH
+				}
+				remove_core = CRH
+				add_core = THIS
+				secede_province = THIS
+			}
+		}
+				
+		CRH = { 
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = WES
+						is_core = RHI
+					}
+				}
+				remove_core = CRH
+				add_core = THIS
+				secede_province = THIS
+			}
+		}
+	}
+}
 
+country_event = {
+	id = 44611
+	title = "The French surrender" #NETherlands
+	desc = "With the French defeated we will begin carrying out the terms signed in the treaty of Vienna. The Belgians won't like us ruling them..."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are victorious"
+		prestige = 20
+		
+		FRA = {
+			any_owned = {
+				limit = {
+					is_core = NET
+				}
+				secede_province = NET
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = BEL
+			}
+			add_province_modifier = {
+				name = peasant_revolt
+				duration = 1460
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 44612
+	title = "The French surrender" #Russia
+	desc = "The great bear stands victorious. The French have cowered to our might!"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are victorious"
+		prestige = 40
+		
+		any_pop = {
+			dominant_issue = { 
+				value = jingoism
+				factor = 0.05
+			}	
+			militancy = -2
+		}
+	}
+}
