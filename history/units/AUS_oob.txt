@@ -239,7 +239,7 @@ army = {
 
 	regiment = {
 		name= "2.3. Infanteriedivision"
-		type = infantry
+		type = artillery
 		home = 773
 	}
 
@@ -252,7 +252,7 @@ army = {
 
 army = {
 	name = "II. Armee"
-	location = 702
+	location = 637
 	regiment = {
 		name= "1.6. Infanteriedivision"
 		type = infantry
@@ -279,7 +279,7 @@ army = {
 
 	regiment = {
 		name= "2.7. Infanteriedivision"
-		type = infantry
+		type = artillery
 		home = 643
 	}
 
@@ -326,7 +326,7 @@ army = {
 
 	regiment = {
 		name= "3.9. Infanteriedivision"
-		type = infantry
+		type = artillery
 		home = 633
 	}
 

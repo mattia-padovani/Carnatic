@@ -1224,6 +1224,7 @@ country_event = {
 		tag = PRU
 		NOT = { exists = NGF }
 		has_global_flag = watching_the_rhine
+		has_country_flag = preparing_to_fight_napoleon
 			OR = {
 					575 = { owner = { NOT = { is_culture_group = germanic } } }
 					576 = { owner = { NOT = { is_culture_group = germanic } } }

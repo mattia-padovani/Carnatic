@@ -690,6 +690,21 @@ navy = {
 		name= "3ème Flotille de Transport"
 		type = clipper_transport
 	}
+	
+	ship = {
+		name= "4ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "5ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6ème Flotille de Transport"
+		type = clipper_transport
+	}
 
 }
 
@@ -875,7 +890,15 @@ navy = {
 		name= "6ème Flotille de Transport"
 		type = clipper_transport
 	}
+	ship = {
+		name= "7ème Flotille de Transport"
+		type = clipper_transport
+	}
 
+	ship = {
+		name= "8ème Flotille de Transport"
+		type = clipper_transport
+	}
 }
 
 leader = {
@@ -950,6 +973,12 @@ army = {
 	name = "2eme Division d'Infanterie"
 	location = 395 #Liege
 	regiment = {
+		name= "1er Brigade de Cavalerie"
+		type = dragoon
+		home = 387 #Brussels
+	}
+	
+	regiment = {
 		name= "4e Infanterie Brigade"
 		type = infantry
 		home = 390 #Antwerp
@@ -966,10 +995,7 @@ army = {
 		type = infantry
 		home = 394 #Charleroi
 	}
-
-}
-
-army = {
+	
 	name = "3eme Division d'Infanterie"
 	location = 388 #Brugges
 	regiment = {
@@ -979,28 +1005,21 @@ army = {
 	}
 
 	regiment = {
-		name= "8eme Brigade d'Infanterie"
-		type = infantry
+		name= "8eme Brigade d'Artillerie"
+		type = artillery
 		home = 395
 	}
 
 	regiment = {
-		name= "9eme Brigade d'Infanterie"
-		type = infantry
+		name= "9eme Brigade d'Artillerie"
+		type = artillery
 		home = 398 #Arlon
 	}
-
 }
 
 army = {
 	name = "1er Division de Cavalerie"
 	location = 395 #Liege
-	regiment = {
-		name= "1er Brigade de Cavalerie"
-		type = dragoon
-		home = 387 #Brussels
-	}
-
 	regiment = {
 		name= "2eme Brigade de Cavalerie"
 		type = cuirassier
