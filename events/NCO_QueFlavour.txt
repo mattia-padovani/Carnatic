@@ -249,26 +249,6 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = "We won, but we can't stand alone"
-		set_global_flag = lou_american_war_lost
-		LOU = { 
-			all_core = {
-				remove_core = USA
-			} 
-		}	
-		QUE = {
-			country_event = 44325
-			add_accepted_culture = louisianian
-			war_exhaustion = -20
-			prestige = 10
-		}
-		
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
-	option = {
 		name = "The alliance stands tall!"
 		prestige = 5
 		set_global_flag = lou_american_war_lost

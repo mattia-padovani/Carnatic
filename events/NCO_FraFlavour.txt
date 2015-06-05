@@ -49,37 +49,13 @@ country_event = {
 		war = {
 			target = ENG
 			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1261
+				casus_belli = acquire_all_india_cores
+				country = FRA
 			}
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1249
-			}
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1251
+			defender_goal = {
+				casus_belli = acquire_all_india_cores
+				country = ENG
 			}		
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1257
-			}
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1258
-			}
-			defender_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1306
-			}		
-			defender_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1287
-			}
-			defender_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1304
-			}
 			call_ally = no
 		}
 		ai_chance = {
@@ -139,17 +115,16 @@ country_event = {
 		prestige = 5
 
 		ai_chance = {
-			factor = 90
+			factor = 40
 		}
 	}
 	
 	option = {
 		name = "We don't want to get involved"
 		relation = { who = ENG value = -100 }
-		prestige = -5
 		
 		ai_chance = {
-			factor = 10
+			factor = 60
 		}
 	}
 }
@@ -174,37 +149,13 @@ country_event = {
 		war = {
 			target = ENG
 			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1261
-			}
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1249
-			}
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1251
-			}		
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1257
-			}
-			attacker_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1258
+				casus_belli = acquire_all_india_cores
+				country = FRA
 			}
 			defender_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1306
-			}		
-			defender_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1287
-			}
-			defender_goal = {
-				casus_belli = place_in_the_sun
-				state_province_id = 1304
-			}
+				casus_belli = acquire_all_india_cores
+				country = ENG
+			}	
 			call_ally = yes
 		}
 		ai_chance = {

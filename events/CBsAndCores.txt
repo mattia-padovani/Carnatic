@@ -2217,5 +2217,6 @@ country_event = {
 	option = {
 		name = "EVT2660OPTB"
 		ai_chance = { factor = 0 }
+		badboy = 4
 	}
 }

@@ -540,7 +540,6 @@ restore_austrian_empire = {
 		neighbour = THIS
 		any_owned_province = {
 			OR = {
-				is_core = VEN
 				is_core = SLO
 				is_core = SLV
 				is_core = BOH
@@ -576,7 +575,6 @@ restore_austrian_empire = {
 	allowed_states = {
 		any_owned_province = {
 			OR = {
-				is_core = VEN
 				is_core = SLO
 				is_core = SLV
 				is_core = BOH
@@ -5747,17 +5745,6 @@ annex_india = {
 
 	allowed_states = {
 		any_owned_province = { is_core = HND }
-		#NOT = { any_owned_province = { is_capital = yes } }
-		OR = {
-			THIS = { ai = no }
-			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			AND = {
-				any_owned_province = { port = yes }
-				THIS = {
-					any_owned_province = { port = yes }
-				}
-			}
-		}
 	}
 	
 	po_demand_state = yes
@@ -5871,4 +5858,76 @@ annex_india_full = {
 			value = 0.1
 		}
 	}
+}
+
+# Acquire All India Core States
+acquire_all_india_cores = {
+	sprite_index = 22
+	is_triggered_only = yes
+	months = 12
+	constructing_cb = no
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		always = no
+		NOT = { is_our_vassal = THIS }
+		number_of_states = 2 # annex if you want their last state		
+		is_vassal = no
+		any_owned_province = { is_core = HND }
+		any_owned_province = { NOT = { is_core = HND } }
+		NOT = { has_country_modifier = neutrality }
+		THIS = {
+			NOT = {
+				has_country_modifier = neutrality
+				AND = {
+					war_policy = pacifism
+					war = no
+				}
+			}
+		}
+		OR = {
+			war_with = THIS
+			THIS = {
+				NOT = { has_country_modifier = punitive_effects }
+			}
+		}
+		OR = {
+			NOT = { has_country_flag = dismantle_declared }
+			THIS = { NOT = { has_country_flag = in_great_war } }
+			THIS = { ai = no }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = { is_core = HND }
+		#NOT = { any_owned_province = { is_capital = yes } }
+	}
+
+	all_allowed_states = yes
+	po_transfer_provinces = yes
+	
+	war_name = WAR_ALL_CORES_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
 }
